@@ -31,7 +31,7 @@
   }
 
   &::-webkit-scrollbar-track {
-    background: #D4D4D4;
+    background: #d4d4d4;
     border-radius: 10px;
   }
 
@@ -41,7 +41,7 @@
   }
 
   &::-webkit-scrollbar-thumb:hover {
-    background: #357ABD;
+    background: #357abd;
   }
 }
 
@@ -49,6 +49,10 @@ p {
   color: #000000;
   font-family: "Times New Roman", Times, serif;
   font-size: 18px;
+  margin: 0;
+  line-height: 1.5;
+  text-align: justify;
+  padding: 0;
 }
 
 ion-toolbar {
@@ -60,5 +64,10 @@ ion-toolbar {
 
 ion-content.background {
   --background: #0e6a74;
-  background: url("/assets/img/background-termos.jpg") no-repeat center center / cover;
+  background: url("/assets/img/background-termos.jpg") no-repeat center center /
+    cover;
+}
+
+ion-infinite-scroll {
+  display: none !important;
 }
