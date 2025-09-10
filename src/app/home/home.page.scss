@@ -1,27 +1,42 @@
-#container {
+//balão de termos
+.balao-principal {
+  border-radius: 15px;
+  padding: 10px;
+  margin: 20px;
+  margin-top: 40px;
+  background: #f6d0a7;
+}
+
+.balao-principal h1 {
+  color: #000000;
+  font-size: 22px;
   text-align: center;
-
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
+  margin-top: 5%;
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+.balao-interno {
+  background: #fff;
+  border-radius: 15px;
+  padding: 15px;
+  margin-top: 10px;
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
+p {
+  color: #000000;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 18px;
 }
 
-#container a {
-  text-decoration: none;
+ion-toolbar {
+  --background: #c4680b;
+  ion-title {
+    color: white;
+  }
+}
+
+ion-content {
+  --background: #0e6a74;
+  // verificar depois - - - - - - - - - background: url("/assets/img/background-termos.jpg") no-repeat center center / cover;
 }
