@@ -1,0 +1,7 @@
+{
+  "name": "teste_pi",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
