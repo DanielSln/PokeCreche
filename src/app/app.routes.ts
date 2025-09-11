@@ -9,5 +9,9 @@ export const routes: Routes = [
     path: '',
     redirectTo: 'termos',
     pathMatch: 'full',
+  },  {
+    path: 'menu',
+    loadComponent: () => import('./pages/menu/menu.page').then( m => m.MenuPage)
   },
+
 ];
