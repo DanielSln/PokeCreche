@@ -26,11 +26,10 @@ import { Router, RouterLink } from '@angular/router';
     RouterLink,
   ],
 })
-
 export class TermosPage {
   constructor(private router: Router) {}
   //Função para aceitar os termos e ir para a página do menu inicial!
   aceitarTermos() {
-    this.router.navigateByUrl('/menu')
+    this.router.navigateByUrl('/menu');
   }
 }

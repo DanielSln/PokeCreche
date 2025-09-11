@@ -1,13 +1,25 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>menu</ion-title>
+    <ion-title>Menu</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">menu</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div id="container">
+    <div class="balao-principal">
+      <h1>Menu Inicial</h1>
+      <div class="balao-interno">
+        <p>Bem-vindo ao Menu Inicial!</p>
+      </div>
+    </div>
+    <div id="botoes">
+      <ion-button id="perfil" expand="block" routerLink="/perfil"
+        >Perfil</ion-button
+      >
+      <ion-button id="configuracoes" expand="block" routerLink="/configuracoes"
+        >Configurações</ion-button
+      >
+      <ion-button id="sair" expand="block" routerLink="/home">Sair</ion-button>
+    </div>
+  </div>
 </ion-content>
