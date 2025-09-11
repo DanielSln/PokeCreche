@@ -103,7 +103,14 @@ ion-infinite-scroll {
   transition: 2s ease-in-out;
 }
 
-ion-content.background {
-  --background: #0e6a74;
-  background: url("/assets/img/background-termos.jpg") no-repeat center center / cover;
+#container {
+  background-image: url("assets/img/termos.png"); /* Ajuste o caminho conforme sua estrutura */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
