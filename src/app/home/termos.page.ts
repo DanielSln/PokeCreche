@@ -9,13 +9,23 @@ import {
   IonButton,
 } from '@ionic/angular/standalone';
 
+import { Router, RouterLink } from '@angular/router';
+
 @Component({
   selector: 'app-termos',
   templateUrl: 'termos.page.html',
   styleUrls: ['termos.page.scss'],
-  imports: [IonHeader, IonToolbar, IonTitle, IonContent, IonInfiniteScroll, IonInfiniteScrollContent, IonButton ],
+  imports: [
+    IonHeader,
+    IonToolbar,
+    IonTitle,
+    IonContent,
+    IonInfiniteScroll,
+    IonInfiniteScrollContent,
+    IonButton,
+    RouterLink,
+  ],
 })
 export class TermosPage {
-  constructor() {}
+  constructor(private router: Router) {}
 }
-
