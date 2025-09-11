@@ -38,6 +38,7 @@
   &::-webkit-scrollbar-thumb {
     background: #000000;
     border-radius: 10px;
+    cursor: pointer;
   }
 
   &::-webkit-scrollbar-thumb:hover {
@@ -86,6 +87,12 @@ ion-infinite-scroll {
   --border-radius: 8px;
   --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   font-weight: bold;
+  cursor: pointer;
+}
+
+#aceitar.hoover {
+  --background: #0a8e1c;
+  transition: 2s ease-in-out;
 }
 
 #recusar {
@@ -94,4 +101,10 @@ ion-infinite-scroll {
   --border-radius: 8px;
   --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   font-weight: bold;
+  cursor: pointer;
+}
+
+#recusar.hoover {
+  --background: #c0392b;
+  transition: 2s ease-in-out;
 }
