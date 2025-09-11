@@ -21,7 +21,7 @@
   border-radius: 15px;
   padding: 15px;
   margin-top: 10px;
-  max-height: 240px;
+  max-height: 255px;
   overflow: hidden;
   overflow-y: auto;
   position: relative;
@@ -31,17 +31,18 @@
   }
 
   &::-webkit-scrollbar-track {
-    background: #D4D4D4;
+    background: #d4d4d4;
     border-radius: 10px;
   }
 
   &::-webkit-scrollbar-thumb {
     background: #000000;
     border-radius: 10px;
+    cursor: pointer;
   }
 
   &::-webkit-scrollbar-thumb:hover {
-    background: #357ABD;
+    background: #357abd;
   }
 }
 
@@ -49,6 +50,10 @@ p {
   color: #000000;
   font-family: "Times New Roman", Times, serif;
   font-size: 18px;
+  margin: 0;
+  line-height: 1.5;
+  text-align: justify;
+  padding: 0;
 }
 
 ion-toolbar {
@@ -58,7 +63,50 @@ ion-toolbar {
   }
 }
 
+ion-infinite-scroll {
+  display: none !important;
+}
+
+//botões de aceitar e recusar aos termos
+#botoes {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  padding: 0 16px;
+}
+
+#aceitar {
+  --background: #0ba825; /* Azul padrão do Ionic */
+  --color: white;
+  --border-radius: 8px;
+  --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#aceitar.hoover {
+  --background: #0a8e1c;
+  transition: 2s ease-in-out;
+}
+
+#recusar {
+  --background: #eb445a; /* Vermelho padrão do Ionic */
+  --color: white;
+  --border-radius: 8px;
+  --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#recusar.hoover {
+  --background: #c0392b;
+  transition: 2s ease-in-out;
+}
+
 ion-content.background {
-  --background: #0e6a74;
-  background: url("/assets/img/background-termos.jpg") no-repeat center center / cover;
+  --background: rgba(255, 255, 255, 0.8);;
+  
+  height: 100% !important;
+  width: 100% !important;
+  position: relative;
 }
