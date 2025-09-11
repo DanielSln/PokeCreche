@@ -72,9 +72,26 @@ ion-infinite-scroll {
   display: none !important;
 }
 
+//botões de aceitar e recusar aos termos
 #botoes {
   display: flex;
-  justify-content: center;
-  gap: 70px;
-  margin: 30px;
+  justify-content: space-around;
+  margin-top: 20px;
+  padding: 0 16px;
+}
+
+#aceitar {
+  --background: #0ba825; /* Azul padrão do Ionic */
+  --color: white;
+  --border-radius: 8px;
+  --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-weight: bold;
+}
+
+#recusar {
+  --background: #eb445a; /* Vermelho padrão do Ionic */
+  --color: white;
+  --border-radius: 8px;
+  --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-weight: bold;
 }
