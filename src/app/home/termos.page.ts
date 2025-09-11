@@ -10,12 +10,12 @@ import {
 } from '@ionic/angular/standalone';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: 'home.page.html',
-  styleUrls: ['home.page.scss'],
+  selector: 'app-termos',
+  templateUrl: 'termos.page.html',
+  styleUrls: ['termos.page.scss'],
   imports: [IonHeader, IonToolbar, IonTitle, IonContent, IonInfiniteScroll, IonInfiniteScrollContent, IonButton ],
 })
-export class HomePage {
+export class TermosPage {
   constructor() {}
 }
 
