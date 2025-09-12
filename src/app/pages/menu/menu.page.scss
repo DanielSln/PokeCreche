@@ -9,13 +9,52 @@ ion-toolbar ion-title {
 }
 
 ion-content {
-    --background: #f6d0a7;
+  --background: #f6d0a7;
 }
 
+/* tira padding do content se quiser usar a largura toda */
+ion-content {
+  --padding-start: 0;
+  --padding-end: 0;
+}
+
+/* container que centraliza os filhos */
+.botoes-menu {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center; /* centraliza horizontalmente */
+  padding: 0; /* sem padding extra */
+  margin: 0;
+}
+
+/* estilo do botão */
 ion-button {
   --background: #ffffff;
   --color: #0e6a74;
-  font-family: Work Sans;
-  margin-top: 20px;
-  
+  font-family: "Roboto", sans-serif;
+  border: 2px solid black;
+  border-radius: 5px;
+
+  /* largura menor e centralizada */
+  width: 90%; /* ocupa 90% do espaço do container */
+  max-width: 350px; /* limite em telas grandes */
+
+  min-height: 60px;
+  font-size: clamp(1rem, 4vw, 2rem);
+
+  /* zera padding interno padrão do Ionic */
+  --padding-start: 0;
+  --padding-end: 0;
+  --padding-top: 0;
+  --padding-bottom: 0;
+  padding: 0.5rem; /* padding interno que você quiser */
+}
+
+.botoes-menu {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column; /* um embaixo do outro */
+  align-items: center; /* centraliza horizontalmente */
+  gap: 15px; /* espaço entre os botões */
+  padding: 0;
 }
