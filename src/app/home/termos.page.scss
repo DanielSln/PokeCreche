@@ -11,7 +11,7 @@
   color: #000000;
   font-size: clamp(20px, 2.5vw, 26px); /* responsivo */
   text-align: center;
-  font-family: "Work Sans";
+  font-family: 'Mango AC', sans-serif;
   font-weight: bold;
   margin-top: 5%;
   -webkit-font-smoothing: antialiased;
@@ -47,7 +47,7 @@
 
 p {
   color: #000000;
-  font-family: "Times New Roman", Times, serif;
+  font-family: 'Mango AC', sans-serif;
   font-size: clamp(16px, 1.8vw, 18px); /* responsivo */
   margin: 0;
   line-height: 1.5;
@@ -78,10 +78,10 @@ ion-infinite-scroll {
   justify-content: center;
   margin-top: 30px;
   padding: 0 16px;
+  font-family: 'Mango AC', sans-serif;
 }
 
-#aceitar,
-#recusar {
+#aceitar, #recusar {
   --color: white;
   --border-radius: 8px;
   --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
