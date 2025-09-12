@@ -1,0 +1,175 @@
+ion-toolbar {
+    --background: #c4680b;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+   
+    ion-title {
+      color: white;
+      font-size: 22px;
+      text-align: center;
+      flex: 1; // permite centralização entre ícones
+      font-family: 'Mango AC', sans-serif;
+      padding: 12px 0;
+    }
+   
+    ion-buttons {
+      flex: 0 0 auto;
+    }
+  }
+   
+  ion-content {
+    --background: #f6d0a7;
+  }
+   
+  .ion-padding {
+    h1 {
+      justify-content: center;
+      display: flex;
+      font-family: 'Mango AC', sans-serif;
+      margin: 0;
+      margin-top: 50px;
+      font-size: 28px;
+    }
+  }
+   
+  .meu-filho {
+    width: 120px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+  }
+   
+  .QR_code {
+    width: 150px;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5% auto 0 auto;
+  }
+   
+  .info_filho {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+   
+    p {
+      font-family: 'Mango AC', Arial, sans-serif;
+      font-size: 18px;
+      text-align: center;
+      display: inline-block;
+      margin: 2%;
+    }
+  }
+   
+  // =========================
+  // RESPONSIVIDADE
+  // =========================
+   
+  @media (max-width: 768px) {
+    #container {
+      padding: 0 12px;
+   
+      strong {
+        font-size: 18px;
+        line-height: 24px;
+      }
+   
+      p {
+        font-size: 14px;
+        line-height: 20px;
+      }
+    }
+   
+    .meu-filho {
+      width: 100px;
+      height: 100px;
+    }
+   
+    .QR_code {
+      width: 150px;
+      height: 150px;
+      margin-top: 8%;
+      display: flex;
+      justify-content: center;
+    }
+   
+    .info_filho p {
+      font-family: 'Mango AC', Arial, sans-serif;
+      font-size: 18px;
+      text-align: center;
+      justify-content: center;
+      justify-items: center;
+      margin: 2%;
+      display: flex;
+      flex-direction: column;
+    }
+   
+    // HEADER responsivo para tablets
+    ion-toolbar {
+      ion-title {
+        font-size: 20px;
+      }
+    }
+   
+    .ion-padding h1 {
+      font-size: 24px;
+    }
+  }
+   
+  @media (max-width: 480px) {
+   
+    .meu-filho {
+      width: 90px;
+      height: 90px;
+    }
+   
+    .QR_code {
+      width: 150px;
+      height: 150px;
+      margin-top: 10%;
+    }
+   
+    .info_filho {
+      flex-direction: column;
+      display: flex;
+      justify-content: center;
+   
+      p {
+      font-family: 'Mango AC', Arial, sans-serif;
+      font-size: 18px;
+      text-align: center;
+      justify-content: center;
+      justify-items: center;
+      margin: 2%;
+      display: flex;
+      }
+    }
+   
+    // HEADER responsivo para smartphones
+    ion-toolbar {
+      padding: 0 8px;
+   
+      ion-title {
+        font-size: 18px;
+        padding: 10px 0;
+      }
+   
+      ion-buttons {
+        button {
+          font-size: 16px;
+        }
+      }
+    }
+   
+    .ion-padding h1 {
+      font-size: 22px;
+    }
+  }
+   
