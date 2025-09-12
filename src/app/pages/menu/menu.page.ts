@@ -10,6 +10,7 @@ import {
   IonMenu,
   IonMenuButton,
   IonApp,
+  IonList,
 } from '@ionic/angular/standalone';
 
 @Component({
@@ -28,6 +29,7 @@ import {
     IonMenu,
     IonMenuButton,
     IonApp,
+    IonList,
   ],
 })
 export class MenuPage implements OnInit {
