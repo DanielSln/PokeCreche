@@ -7,6 +7,9 @@ import {
   IonTitle,
   IonToolbar,
   IonButton,
+  IonMenu,
+  IonMenuButton,
+  IonApp,
 } from '@ionic/angular/standalone';
 
 @Component({
@@ -22,6 +25,9 @@ import {
     CommonModule,
     FormsModule,
     IonButton,
+    IonMenu,
+    IonMenuButton,
+    IonApp,
   ],
 })
 export class MenuPage implements OnInit {
@@ -29,3 +35,5 @@ export class MenuPage implements OnInit {
 
   ngOnInit() {}
 }
+
+export class ExampleComponent {}
