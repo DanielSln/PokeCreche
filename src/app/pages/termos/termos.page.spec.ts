@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TermosPage } from './termos.page';
+import { TermosPage } from 'src/app/pages/termos/termos.page';
 
 describe('HomePage', () => {
   let component: TermosPage;
