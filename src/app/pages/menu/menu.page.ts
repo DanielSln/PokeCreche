@@ -14,6 +14,8 @@ import {
   IonButtons,
 } from '@ionic/angular/standalone';
 
+import { Router, RouterLink } from '@angular/router';
+
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.page.html',
@@ -32,12 +34,16 @@ import {
     IonApp,
     IonList,
     IonButtons,
+    RouterLink
   ],
 })
+
 export class MenuPage implements OnInit {
-  constructor() {}
+  constructor(private router: Router) {}
 
   ngOnInit() {}
-}
 
-export class ExampleComponent {}
+  irParaFilho() {
+    this.router.navigateByUrl('/filho');
+  }
+ }
