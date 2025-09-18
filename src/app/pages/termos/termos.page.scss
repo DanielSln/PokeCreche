@@ -76,8 +76,8 @@ ion-infinite-scroll {
   flex-wrap: wrap; /* quebra em telas pequenas */
   gap: 10px;
   justify-content: center;
-  margin-top: 30px;
-  padding: 0 16px;
+  margin-top: 45px;
+  padding: 0 45px;
   font-family: 'Mango AC', sans-serif;
 }
 
@@ -118,6 +118,7 @@ ion-infinite-scroll {
   padding: 20px;
   box-sizing: border-box;
   overflow-x: hidden;
+  opacity: 100%;
 }
 
 /* MEDIA QUERIES PARA TELAS MENORES */
