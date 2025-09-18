@@ -20,7 +20,7 @@ ion-content {
 
 /* container que centraliza os filhos */
 .botoes-menu {
-  margin-top: 30px;
+  margin-top: 20px;
   display: flex;
   justify-content: center; /* centraliza horizontalmente */
   padding: 0; /* sem padding extra */
@@ -36,7 +36,7 @@ ion-button {
   border-radius: 5px;
 
   /* largura menor e centralizada */
-  width: 90%; /* ocupa 90% do espaço do container */
+  width: 100%; /* ocupa 90% do espaço do container */
   max-width: 350px; /* limite em telas grandes */
 
   min-height: 60px;
@@ -51,10 +51,16 @@ ion-button {
 }
 
 .botoes-menu {
+  --background: #ffffff
   margin-top: 30px;
   display: flex;
   flex-direction: column; /* um embaixo do outro */
   align-items: center; /* centraliza horizontalmente */
   gap: 15px; /* espaço entre os botões */
   padding: 0;
+}
+
+ion-menu-button {
+  --color: #000;
+  
 }
