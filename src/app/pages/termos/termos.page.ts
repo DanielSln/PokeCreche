@@ -23,7 +23,6 @@ import { Router, RouterLink } from '@angular/router';
     IonInfiniteScroll,
     IonInfiniteScrollContent,
     IonButton,
-    RouterLink,
   ],
 })
 export class TermosPage {

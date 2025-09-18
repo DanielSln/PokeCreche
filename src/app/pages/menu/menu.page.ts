@@ -10,7 +10,6 @@ import {
   IonMenu,
   IonMenuButton,
   IonApp,
-  IonList,
   IonButtons,
 } from '@ionic/angular/standalone';
 
@@ -29,12 +28,8 @@ import { Router, RouterLink } from '@angular/router';
     CommonModule,
     FormsModule,
     IonButton,
-    IonMenu,
     IonMenuButton,
-    IonApp,
-    IonList,
     IonButtons,
-    RouterLink
   ],
 })
 
