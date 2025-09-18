@@ -67,5 +67,6 @@ ion-button {
 ion-menu-button {
   --color: #000;
   width: 60px;
+  --ion-background-color: var(--ion-color-primary);
 }
 
