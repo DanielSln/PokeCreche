@@ -51,21 +51,20 @@ ion-button {
 
 .botoes-menu {
   --background: #ffffff;
-  margin-top: 20px;
+  margin-top: 8vh; /* usa unidade relativa à altura da tela */
   display: flex;
-  flex-direction: column; /* um embaixo do outro */
-  align-items: center; /* centraliza horizontalmente */
-  gap: 15px; /* espaço entre os botões */
+  flex-direction: column;
+  align-items: center;
+  gap: 3vh; /* espaço entre botões proporcional à tela */
   padding: 0;
+  width: 100%;
+  box-sizing: border-box;
 }
+
 
 /* MENU */
 
 ion-menu-button {
   --color: #000;
   width: 60px;
-}
-
-ion-menu::part(::backdrop) {
-  background-color: rgba(255, 0, 255, 0.5);
 }
