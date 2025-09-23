@@ -1,0 +1,86 @@
+<ion-header>
+  <ion-toolbar color="warning">
+    <ion-title>Calendário</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <!-- Caixa do calendário -->
+  <div class="calendar-box">
+    <div class="calendar-header">
+      <span class="month">03 ☀️ MAR 2025</span>
+    </div>
+
+    <table class="calendar-table">
+      <thead>
+        <tr>
+          <th>S</th>
+          <th>M</th>
+          <th>T</th>
+          <th>W</th>
+          <th>T</th>
+          <th>F</th>
+          <th>S</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>2</td>
+          <td>3</td>
+          <td>4</td>
+          <td class="mark-green">6</td>
+          <td>7</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td class="mark-green">10</td>
+          <td>11</td>
+          <td>12</td>
+          <td>13</td>
+          <td>14</td>
+          <td>15</td>
+        </tr>
+        <tr>
+          <td class="mark-green">16</td>
+          <td>17</td>
+          <td class="mark-red">20</td>
+          <td>21</td>
+          <td>22</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>23</td>
+          <td>24</td>
+          <td>25</td>
+          <td class="mark-green">26</td>
+          <td>27</td>
+          <td>28</td>
+          <td>29</td>
+        </tr>
+        <tr>
+          <td class="mark-green">30</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Botões de eventos -->
+  <div class="buttons">
+    <ion-button expand="block" color="success" fill="solid">
+      Dia do Brinquedo <ion-icon slot="end" name="chevron-down"></ion-icon>
+    </ion-button>
+
+    <ion-button expand="block" color="danger" fill="solid">
+      Dia de Recesso <ion-icon slot="end" name="chevron-down"></ion-icon>
+    </ion-button>
+  </div>
+
+  <!-- Faltas -->
+  <div class="faltas">
+    <div class="faltas-icon"></div>
+    <h2>Faltas</h2>
+  </div>
+</ion-content>
