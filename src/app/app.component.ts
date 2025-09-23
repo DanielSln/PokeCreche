@@ -8,7 +8,9 @@ import {
   IonTitle,
   IonContent,
   IonItem,
-  IonAvatar
+  IonAvatar,
+  IonLabel,
+  IonText,
 } from '@ionic/angular/standalone';
 
 @Component({
@@ -26,8 +28,15 @@ import {
     IonContent,
     IonItem,
     IonAvatar,
+    IonLabel,
+    IonText,
   ],
 })
 export class AppComponent {
+  profile = {
+    name: 'Daniel',
+    email: 'daniel@gmail.com'
+  };
+  
   constructor() {}
 }
