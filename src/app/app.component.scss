@@ -3,5 +3,16 @@ ion-header {
     div.bg {
         height: 10rem;
     }
+}
+
+// Estilos do menu lateral
+ion-menu {
+    --background: #f4f4f4;
+    --color: #333;
+    
+    ion-content {
+        --background: #ffffff;
+    }
 
 }
+
