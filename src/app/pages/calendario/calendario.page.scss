@@ -1,75 +1,71 @@
 ion-toolbar {
-  font-family: "Comic Sans MS", cursive;
+  --background: #c4680b;
+}
+
+ion-toolbar ion-title {
+  color: white;
+  font-family: Work Sans;
   text-align: center;
 }
 
-.calendar-box {
-  border: 2px solid #a66cff;
-  border-radius: 8px;
-  padding: 8px;
-  background: #fefefe;
-  text-align: center;
+ion-content {
+  --background: #f6d0a7;
 }
 
-.calendar-header {
-  background: #4caf50;
-  color: #fff;
-  font-size: 1.2rem;
-  padding: 4px 0;
-  border-radius: 4px 4px 0 0;
+/* tira padding do content se quiser usar a largura toda */
+ion-content {
+  --padding-start: 0;
+  --padding-end: 0;
 }
 
-.calendar-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 8px;
-  font-size: 1rem;
-}
-
-.calendar-table th {
-  color: #555;
-}
-
-.calendar-table td {
-  padding: 4px;
-  text-align: center;
-  color: #2e7d32;
-}
-
-.mark-green {
-  background-color: #2e7d32;
-  color: #fff;
-  border-radius: 50%;
-}
-
-.mark-red {
-  background-color: #c62828;
-  color: #fff;
-  border-radius: 50%;
-}
-
-.buttons {
-  margin-top: 12px;
-  display: grid;
-  gap: 8px;
-}
-
-.faltas {
-  display: flex;
-  align-items: center;
+/* container que centraliza os filhos */
+.botoes-menu {
   margin-top: 20px;
+  display: flex;
+  justify-content: center; /* centraliza horizontalmente */
+  padding: 0; /* sem padding extra */
+  margin: 0;
 }
 
-.faltas-icon {
-  width: 40px;
-  height: 40px;
-  background: #f6c390;
-  border-radius: 8px;
-  margin-right: 10px;
+/* estilo do botão */
+ion-button {
+  --background: #ffffff;
+  --color: #0e6a74;
+  font-family: 'Arial Narrow Bold', sans-serif;
+  border: 2px solid black;
+  border-radius: 5px;
+
+  /* largura menor e centralizada */
+  width: 80%; /* ocupa 90% do espaço do container */
+  max-width: 350px; /* limite em telas grandes */
+
+  min-height: 60px;
+  font-size: clamp(1rem, 4vw, 2rem);
+
+  /* zera padding interno padrão do Ionic */
+  --padding-start: 0;
+  --padding-end: 0;
+  --padding-top: 0;
+  --padding-bottom: 0;
 }
 
-.faltas h2 {
-  font-weight: bold;
-  font-family: "Comic Sans MS", cursive;
+.botoes-menu {
+  --background: #ffffff;
+  margin-top: 8vh; /* usa unidade relativa à altura da tela */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3vh; /* espaço entre botões proporcional à tela */
+  padding: 0;
+  width: 100%;
+  box-sizing: border-box;
 }
 
+
+/* MENU */
+
+ion-menu-button {
+  --color: #000;
+  width: 60px;
+  --ion-background-color: var(--ion-color-primary);
+}
