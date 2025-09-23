@@ -7,6 +7,8 @@ import {
   IonToolbar,
   IonTitle,
   IonContent,
+  IonItem,
+  IonAvatar
 } from '@ionic/angular/standalone';
 
 @Component({
@@ -22,6 +24,8 @@ import {
     IonToolbar,
     IonTitle,
     IonContent,
+    IonItem,
+    IonAvatar,
   ],
 })
 export class AppComponent {
