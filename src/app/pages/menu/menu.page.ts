@@ -38,7 +38,5 @@ export class MenuPage implements OnInit {
 
   irParaFilho() {
     this.router.navigateByUrl('/filho');
-
  }
-
 }

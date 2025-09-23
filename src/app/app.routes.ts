@@ -22,4 +22,5 @@ export const routes: Routes = [
     path: 'cadastro-prof',
     loadComponent: () => import('./pages/cadastro-prof/cadastro-prof.page').then( m => m.CadastroProfPage)
   },
+
 ];
