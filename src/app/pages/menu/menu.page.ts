@@ -7,9 +7,7 @@ import {
   IonTitle,
   IonToolbar,
   IonButton,
-  IonMenu,
   IonMenuButton,
-  IonApp,
   IonButtons,
 } from '@ionic/angular/standalone';
 
