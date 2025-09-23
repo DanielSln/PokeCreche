@@ -35,7 +35,7 @@ import {
 export class AppComponent {
   profile = {
     name: 'Daniel',
-    email: 'daniel@gmail.com'
+    email: 'daniel7'
   };
   
   constructor() {}
