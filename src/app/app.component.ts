@@ -91,7 +91,7 @@ export class AppComponent {
       active: false,
     },
 
-    { Title: 'Sair', 
+    { title: 'Sair', 
       url: '/folder/Sair', 
       icon: 'log-out', 
       active: false 
