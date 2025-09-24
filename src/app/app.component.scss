@@ -1,5 +1,6 @@
 ion-header {
-    height: 10rem;
+    height: 7rem;
+    position: relative;
     div.bg {
         height: 10rem;
         background: linear-gradient(90deg, #c4680b, #ffffff);
@@ -38,9 +39,6 @@ ion-header {
         }
     }
 }
-
-// Estilos do menu lateral
-
 
 // Estilos do menu lateral
 ion-menu {
