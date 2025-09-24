@@ -50,23 +50,44 @@ export class AppComponent {
 
   pages = [
     { title: 'Menu', 
-    url: '/folder/Menu', 
-    icon: 'menu', 
-    active: true },
+      url: '/folder/Menu', 
+      icon: 'menu', 
+      active: true },
+
+    {
+      title: 'Filho',
+      url: '/folder/Filho',
+      icon: 'filho',
+      active: true,
+    },
 
     {
       title: 'Calendário',
       url: '/folder/Calendario',
       icon: 'calendario',
-      active: false,
+      active: true,
     },
-    
+
     {
       title: 'Notificações',
       url: '/folder/Notificacoes',
       icon: 'notificacao',
       active: false,
     },
+
+    {
+      title: 'Status',
+      url: '/folder/Status',
+      icon: 'status',
+      active: false,
+    },
+
+    {
+      title: 'Conversas',
+      url: '/folder/Conversas',
+      icon: 'conversas',
+      active: false,
+    }
   ];
 
   constructor() {
