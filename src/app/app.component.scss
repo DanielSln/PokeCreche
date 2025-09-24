@@ -12,7 +12,7 @@ ion-header {
 
     }
     ion-item {
-        top: 1rem;
+        top: 0.5rem;
         --background: transparent;
         position: absolute;
         left: 0;
@@ -49,13 +49,33 @@ ion-menu {
         --background: #ffffff;
 
         ion-item {
+            margin-top: 2rem;
             --background: #ffffff; // força fundo branco nos itens
-            --color: #222222;      // força texto escuro
+            --color: #000;      // força texto escuro
 
             ion-icon {
-                color: #222222;    // ícones escuros
+                color: #000;   // ícones escuros
+                
             }
+        }
+        .menu-itens {
+            letter-spacing: 0.5px;
+            //padding-left: 1rem;
+            margin-top: 10px;
         }
     }
 }
 
+ion-item.selected {
+    border-left: 5px solid #c4680b;
+    ion-label {
+        font-weight: bold;
+        font-size: 1.1rem;
+    }
+    ion-label, ion-icon {
+        color: #c4680b !important;
+    }
+    ion-item {
+        border-left: 5px solid #fff;
+    }
+}

@@ -1,8 +1,10 @@
+import { NgClass } from '@angular/common';
 import { Component } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import {
   IonApp,
   IonRouterOutlet,
+  IonMenuToggle,
   IonMenu,
   IonHeader,
   IonContent,
@@ -34,6 +36,7 @@ import {
   imports: [
     IonApp,
     IonRouterOutlet,
+    IonMenuToggle,
     IonMenu,
     IonHeader,
     IonContent,
@@ -42,6 +45,7 @@ import {
     IonLabel,
     IonText,
     IonIcon,
+    NgClass,
   ],
 })
 export class AppComponent {
@@ -51,23 +55,20 @@ export class AppComponent {
   };
 
   pages = [
-    { title: 'Menu', 
-      url: '/folder/Menu', 
-      icon: 'menu', 
-      active: true },
+    { title: 'Menu', url: '/folder/Menu', icon: 'menu', active: true },
 
     {
       title: 'Filho',
       url: '/folder/Filho',
       icon: 'filho',
-      active: true,
+      active: false,
     },
 
     {
       title: 'Calendário',
       url: '/folder/Calendario',
       icon: 'calendario',
-      active: true,
+      active: false,
     },
 
     {
@@ -91,12 +92,13 @@ export class AppComponent {
       active: false,
     },
 
-    { title: 'Sair', 
-      url: '/folder/Sair', 
-      icon: 'log-out', 
-      active: false 
+    {
+      title: 'Sair',
+      url: '/folder/Sair',
+      icon: 'log-out',
+      route: true,
+      active: false,
     },
-    
   ];
 
   constructor() {
@@ -116,4 +118,17 @@ export class AppComponent {
       'log-out': logOut,
     });
   }
+
+  onItemTap(page: any) {
+    this.pages.forEach((p) => (p.active = false));
+    page.active = true;
+
+    if (page?.route) {
+      //navigate
+    } else {
+      this.logout();
+    }
+  }
+
+  logout() {}
 }

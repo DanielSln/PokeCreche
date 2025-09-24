@@ -15,12 +15,17 @@
       </ion-item>
     </ion-header>
     <ion-content>
+
       @for(page of pages; track page.title) {
-      <ion-item lines="none">
-        <ion-icon slot="start" [name]="page.icon"></ion-icon>
-        <ion-label>{{ page.title }}</ion-label>
-      </ion-item>
+      <ion-menu-toggle class="menu-itens" autohide="false">
+        <ion-item lines="none" class="ion-padding-start" [ngClass]="{'selected': page?.active}" (click)="onItemTap(page)" >
+          <ion-icon slot="start" [name]="page.icon"></ion-icon>
+
+          <ion-label>{{ page.title }}</ion-label>
+        </ion-item>
+      </ion-menu-toggle>
       }
+
     </ion-content>
   </ion-menu>
   <ion-router-outlet id="main-content"></ion-router-outlet>
