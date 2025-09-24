@@ -16,7 +16,7 @@
     </ion-header>
 
     <ion-content>
-      @for(page of pages, track $index) {
+      @for(page of pages; track page.title) {
         <ion-item lines="none">
           <ion-icon
             slot="start"

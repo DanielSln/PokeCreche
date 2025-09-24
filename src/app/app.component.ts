@@ -4,14 +4,11 @@ import {
   IonRouterOutlet,
   IonMenu,
   IonHeader,
-  IonToolbar,
-  IonTitle,
   IonContent,
   IonItem,
   IonAvatar,
   IonLabel,
   IonText,
-  IonIcon,
 } from '@ionic/angular/standalone';
 
 import { addIcons } from 'ionicons';
@@ -36,14 +33,11 @@ import {
     IonRouterOutlet,
     IonMenu,
     IonHeader,
-    IonToolbar,
-    IonTitle,
     IonContent,
     IonItem,
     IonAvatar,
     IonLabel,
     IonText,
-    IonIcon,
   ],
 })
 export class AppComponent {
