@@ -3,11 +3,11 @@ import {
   IonContent,
   IonHeader,
   IonToolbar,
-  IonTitle,
   IonButtons,
   IonMenuButton,
   IonButton,
   IonIcon,
+  IonDatetime
 } from '@ionic/angular/standalone';
 
 @Component({
@@ -19,18 +19,17 @@ import {
     IonContent,
     IonHeader,
     IonToolbar,
-    IonTitle,
-    // só mantenha os que realmente usa no HTML:
     IonButtons,
     IonMenuButton,
     IonButton,
     IonIcon,
+    IonDatetime
   ],
 })
 export class CalendarioPage implements OnInit {
   constructor() {}
 
   ngOnInit() {
-    // lógica inicial aqui
+    
   }
 }
