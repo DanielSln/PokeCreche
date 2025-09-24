@@ -5,8 +5,6 @@ import {
   IonToolbar,
   IonButtons,
   IonMenuButton,
-  IonButton,
-  IonIcon,
   IonDatetime
 } from '@ionic/angular/standalone';
 
@@ -21,8 +19,6 @@ import {
     IonToolbar,
     IonButtons,
     IonMenuButton,
-    IonButton,
-    IonIcon,
     IonDatetime
   ],
 })
