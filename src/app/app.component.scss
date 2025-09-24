@@ -1,5 +1,5 @@
 ion-header {
-    height: 7rem;
+    height: 8rem;
     position: relative;
     div.bg {
         height: 10rem;
@@ -42,12 +42,20 @@ ion-header {
 
 // Estilos do menu lateral
 ion-menu {
-    --background: #f4f4f4;
-    --color: #ffffff;
-    
+    --background: #ffffff;
+    --color: #222222;
+
     ion-content {
         --background: #ffffff;
-    }
 
+        ion-item {
+            --background: #ffffff; // força fundo branco nos itens
+            --color: #222222;      // força texto escuro
+
+            ion-icon {
+                color: #222222;    // ícones escuros
+            }
+        }
+    }
 }
 
