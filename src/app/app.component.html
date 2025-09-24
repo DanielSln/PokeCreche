@@ -18,11 +18,8 @@
     <ion-content>
       @for(page of pages; track page.title) {
         <ion-item lines="none">
-          <ion-icon
-            slot="start"
-            [ios]="page.icon + '-outline'"
-            [md]="page.icon + '-sharp'">
-          </ion-icon>
+          <ion-icon slot="start" [name]="page.icon"></ion-icon>
+          <ion-label>{{ page.title }}</ion-label>
         </ion-item>
       }
     </ion-content>

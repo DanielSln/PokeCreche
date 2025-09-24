@@ -9,6 +9,7 @@ import {
   IonAvatar,
   IonLabel,
   IonText,
+  IonIcon,
 } from '@ionic/angular/standalone';
 
 import { addIcons } from 'ionicons';
@@ -38,6 +39,7 @@ import {
     IonAvatar,
     IonLabel,
     IonText,
+    IonIcon,
   ],
 })
 export class AppComponent {
