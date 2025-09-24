@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 import {
   IonApp,
   IonRouterOutlet,
@@ -22,6 +23,7 @@ import {
   menu,
   menuOutline,
   menuSharp,
+  logOut,
 } from 'ionicons/icons';
 
 @Component({
@@ -87,7 +89,14 @@ export class AppComponent {
       url: '/folder/Conversas',
       icon: 'conversas',
       active: false,
-    }
+    },
+
+    { Title: 'Sair', 
+      url: '/folder/Sair', 
+      icon: 'log-out', 
+      active: false 
+    },
+    
   ];
 
   constructor() {
@@ -104,6 +113,7 @@ export class AppComponent {
       menu: menu,
       menuOutline: menuOutline,
       menuSharp: menuSharp,
+      'log-out': logOut,
     });
   }
 }
