@@ -19,7 +19,6 @@ import { addIcons } from 'ionicons';
 import {
   person,
   calendar,
-  notifications,
   happy,
   chatbubbles,
   menu,
@@ -72,13 +71,6 @@ export class AppComponent {
     },
 
     {
-      title: 'Notificações',
-      url: '/folder/Notificacoes',
-      icon: 'notificacao',
-      active: false,
-    },
-
-    {
       title: 'Status',
       url: '/folder/Status',
       icon: 'status',
@@ -109,7 +101,6 @@ export class AppComponent {
     addIcons({
       filho: person,
       calendario: calendar,
-      notificacao: notifications,
       conversas: chatbubbles,
       status: happy,
       menu: menu,
