@@ -8,7 +8,7 @@ export const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'termos',
+    redirectTo: 'status',
     pathMatch: 'full',
   },
   {
@@ -35,4 +35,9 @@ export const routes: Routes = [
         (m) => m.CalendarioPage
       ),
   },
+  {
+    path: 'status',
+    loadComponent: () => import('./pages/status/status.page').then( m => m.StatusPage)
+  },
+
 ];
