@@ -34,9 +34,5 @@ export const routes: Routes = [
       import('./pages/calendario/calendario.page').then(
         (m) => m.CalendarioPage
       ),
-  },  {
-    path: 'notificacoes',
-    loadComponent: () => import('./pages/notificacoes/notificacoes.page').then( m => m.NotificacoesPage)
   },
-
 ];
