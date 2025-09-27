@@ -42,4 +42,8 @@ export class MenuPage implements OnInit {
   irParaCalendario() {
     this.router.navigateByUrl('/calendario');
   }
+
+  irParaStatus() {
+    this.router.navigateByUrl('/status');
+  }
 }
