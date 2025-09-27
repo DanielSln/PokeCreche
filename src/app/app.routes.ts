@@ -8,7 +8,7 @@ export const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'status',
+    redirectTo: 'menu',
     pathMatch: 'full',
   },
   {
