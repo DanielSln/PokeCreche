@@ -1,21 +1,37 @@
-<ion-header class="ion-header-title" [translucent]="true">
+<ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title></ion-title>
     <ion-buttons slot="start">
       <ion-menu-button class="menu-button-externo"></ion-menu-button>
     </ion-buttons>
+    <ion-title>Status</ion-title>
   </ion-toolbar>
 </ion-header>
+
 <ion-content [fullscreen]="true">
+  <!-- Avatar -->
   <div class="ion-padding">
     <div class="meu-filho">
-      <img src="assets/img/avatar.jpg" alt="Foto do filho">
+      <img src="assets/img/avatar.jpg" alt="Foto do filho"/>
     </div>
   </div>
 
+  <!-- Informações do aluno -->
   <div class="status-semanal">
-    <p>Escola: Polivalente</p>
-    <p>Nome: Anthony</p>
-    <p>idade : 16</p>
+    <h2 class="titulo-status">Status Semanal</h2>
+
+    <!-- Cards de status -->
+    <ion-card *ngFor="let item of status">
+      <ion-item lines="none">
+        <ion-icon [name]="item.icone" slot="start" [color]="item.cor"></ion-icon>
+        <ion-label>
+          <h3>{{ item.titulo }}</h3>
+          <p>{{ item.mensagem }}</p>
+        </ion-label>
+        <div slot="end" class="progress-container">
+          <div class="progress-text">{{ item.valor }}%</div>
+          <ion-progress-bar [value]="item.valor / 100" [color]="item.cor"></ion-progress-bar>
+        </div>
+      </ion-item>
+    </ion-card>
   </div>
 </ion-content>
