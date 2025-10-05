@@ -18,10 +18,10 @@ import {
     IonContent,
     IonHeader,
     IonToolbar,
-    CommonModule,
-    FormsModule,
     IonButtons,
     IonMenuButton,
+    CommonModule,
+    FormsModule,
   ],
 })
 export class ComunicadosPage implements OnInit {
@@ -108,10 +108,8 @@ export class ComunicadosPage implements OnInit {
   }
 
   openComunicado(index: number) {
-    console.log('=== FUNÇÃO OPENCOMUNICADO CHAMADA ===');
-    console.log('Index recebido:', index);
-    console.log('Comunicado:', this.comunicados[index]?.title);
-    console.log('Timestamp:', new Date().toLocaleTimeString());
-    alert('Comunicado clicado: ' + index + ' - ' + this.comunicados[index]?.title);
+    const comunicado = this.comunicados[index];
+    console.log('Abrindo comunicado:', comunicado.title);
+    alert(`${comunicado.title}\n\n${comunicado.content}`);
   }
 }
