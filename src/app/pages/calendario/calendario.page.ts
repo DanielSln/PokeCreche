@@ -5,7 +5,8 @@ import {
   IonToolbar,
   IonButtons,
   IonMenuButton,
-  IonDatetime
+  IonDatetime,
+  IonTitle,
 } from '@ionic/angular/standalone';
 
 @Component({
@@ -19,7 +20,8 @@ import {
     IonToolbar,
     IonButtons,
     IonMenuButton,
-    IonDatetime
+    IonDatetime,
+    IonTitle,
   ],
 })
 export class CalendarioPage implements OnInit {
