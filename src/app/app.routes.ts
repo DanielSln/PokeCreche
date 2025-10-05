@@ -8,7 +8,7 @@ export const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'menu',
+    redirectTo: 'comunicados',
     pathMatch: 'full',
   },
   {
@@ -38,7 +38,8 @@ export const routes: Routes = [
   {
     path: 'status',
     loadComponent: () => import('./pages/status/status.page').then( m => m.StatusPage)
-  },  {
+  },
+  {
     path: 'comunicados',
     loadComponent: () => import('./pages/comunicados/comunicados.page').then( m => m.ComunicadosPage)
   },
