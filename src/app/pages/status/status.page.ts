@@ -4,11 +4,10 @@ import { FormsModule } from '@angular/forms';
 import {
   IonContent,
   IonHeader,
-  IonTitle,
   IonToolbar,
   IonButtons,
   IonMenuButton,
-  IonCard,
+
   IonItem,
   IonIcon,
   IonLabel,
@@ -26,13 +25,11 @@ import { restaurantOutline, happyOutline, peopleOutline } from 'ionicons/icons';
   imports: [
     IonContent,
     IonHeader,
-    IonTitle,
     IonToolbar,
     CommonModule,
     FormsModule,
     IonButtons,
     IonMenuButton,
-    IonCard,
     IonItem,
     IonIcon,
     IonLabel,
