@@ -43,6 +43,9 @@ export const routes: Routes = [
     path: 'comunicados',
     loadComponent: () => import('./pages/comunicados/comunicados.page').then( m => m.ComunicadosPage)
   },
-
+  {
+    path: 'comunicado-detalhes/:id',
+    loadComponent: () => import('./pages/comunicado-detalhes/comunicado-detalhes.page').then( m => m.ComunicadoDetalhesPage)
+  },
 
 ];

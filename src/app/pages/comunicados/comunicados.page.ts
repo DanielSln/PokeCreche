@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
 import {
   IonContent,
   IonHeader,
@@ -98,7 +99,7 @@ export class ComunicadosPage implements OnInit {
     },
   ];
 
-  constructor() {
+  constructor(private router: Router) {
     console.log('ComunicadosPage constructor chamado');
   }
 
@@ -110,6 +111,6 @@ export class ComunicadosPage implements OnInit {
   openComunicado(index: number) {
     const comunicado = this.comunicados[index];
     console.log('Abrindo comunicado:', comunicado.title);
-    alert(`${comunicado.title}\n\n${comunicado.content}`);
+    this.router.navigate(['/comunicado-detalhes', comunicado.id]);
   }
 }

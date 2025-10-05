@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/comunicados"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ comunicado?.title }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="comunicado-detalhes" *ngIf="comunicado">
+    <div class="comunicado-header">
+      <div class="comunicado-avatar" [ngClass]="comunicado.type">
+        {{ comunicado.emoji }}
+      </div>
+      <div class="comunicado-info">
+        <h1>{{ comunicado.title }}</h1>
+        <p class="comunicado-date">{{ comunicado.date }}</p>
+        <span class="comunicado-badge" [ngClass]="comunicado.type">
+          {{ getBadgeText(comunicado.type) }}
+        </span>
+      </div>
+    </div>
+    
+    <div class="comunicado-content">
+      <p [innerHTML]="getFormattedContent()"></p>
+    </div>
+  </div>
+</ion-content>
