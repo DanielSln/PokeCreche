@@ -1,5 +1,5 @@
 ion-toolbar {
-  --background: #c4680b;
+  --background: #007AFF;
 }
 
 ion-toolbar ion-title {
@@ -11,7 +11,7 @@ ion-toolbar ion-title {
 }
 
 ion-content {
-  --background: #fff;
+  --background: #F2F2F7;
 }
 
 ion-menu-button {
@@ -26,7 +26,7 @@ ion-menu-button {
 
 .page-content {
   padding: 0;
-  background: #fff;
+  background: #F2F2F7;
 }
 
 .page-content h1 {
@@ -42,16 +42,18 @@ ion-menu-button {
 .comunicado-card {
   display: flex;
   align-items: center;
-  padding: 8px 0;
-  border-bottom: 1px solid #f0f0f0;
-  background: #fff;
+  padding: 12px 16px;
+  border-bottom: 1px solid #C6C6C8;
+  background: #FFFFFF;
   transition: background 0.2s;
   cursor: pointer;
   margin: 0 16px;
+  border-radius: 8px;
+  margin-bottom: 2px;
 }
 
 .comunicado-card:hover {
-  background: #f5f5f5;
+  background: #F2F2F7;
 }
 
 .comunicado-card:last-child {
@@ -103,7 +105,7 @@ ion-menu-button {
 }
 
 .comunicado-badge {
-  background: #25d366;
+  background: #34C759;
   color: #fff;
   padding: 2px 6px;
   border-radius: 10px;
@@ -114,11 +116,11 @@ ion-menu-button {
 }
 
 .comunicado-badge.urgent {
-  background: #ff5722;
+  background: #FF3B30;
 }
 
 .comunicado-badge.info {
-  background: #2196f3;
+  background: #007AFF;
 }
 
 .comunicado-date {

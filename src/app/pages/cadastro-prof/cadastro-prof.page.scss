@@ -1,0 +1,20 @@
+ion-toolbar {
+  --background: #007AFF;
+}
+
+ion-toolbar ion-title {
+  color: #000;
+  font-size: 22px;
+  text-align: center;
+  font-family: "Mango AC", sans-serif;
+  font-weight: bold;
+}
+
+ion-content {
+  --background: #F2F2F7;
+}
+
+ion-menu-button {
+  --color: #000;
+  font-size: 24px;
+}

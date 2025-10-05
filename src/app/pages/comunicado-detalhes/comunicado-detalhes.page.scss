@@ -1,5 +1,5 @@
 ion-toolbar {
-  --background: #c4680b;
+  --background: #007AFF;
 }
 
 ion-toolbar ion-title {
@@ -11,7 +11,12 @@ ion-toolbar ion-title {
 }
 
 ion-content {
-  --background: #f6d0a7;
+  --background: #F2F2F7;
+}
+
+ion-back-button {
+  --color: #000;
+  font-size: 24px;
 }
 
 .comunicado-detalhes {
@@ -22,10 +27,11 @@ ion-content {
   display: flex;
   align-items: center;
   margin-bottom: 30px;
-  background: #fff;
+  background: #FFFFFF;
   padding: 20px;
-  border-radius: 15px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  border: 1px solid #C6C6C8;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .comunicado-avatar {
@@ -80,22 +86,23 @@ ion-content {
 }
 
 .comunicado-badge.urgent {
-  background: #e74c3c;
+  background: #FF3B30;
 }
 
 .comunicado-badge.info {
-  background: #3498db;
+  background: #007AFF;
 }
 
 .comunicado-badge.default {
-  background: #27ae60;
+  background: #34C759;
 }
 
 .comunicado-content {
-  background: #fff;
+  background: #FFFFFF;
   padding: 25px;
-  border-radius: 15px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  border: 1px solid #C6C6C8;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   line-height: 1.6;
 }
 
