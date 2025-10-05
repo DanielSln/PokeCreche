@@ -8,7 +8,7 @@ export const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'comunicados',
+    redirectTo: 'menu',
     pathMatch: 'full',
   },
   {

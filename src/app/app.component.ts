@@ -78,9 +78,9 @@ export class AppComponent {
     },
 
     {
-      title: 'Conversas',
-      url: '/folder/Conversas',
-      icon: 'conversas',
+      title: 'Comunicados',
+      url: '/folder/comunicados',
+      icon: 'comunicados',
       active: false,
     },
 
@@ -101,7 +101,7 @@ export class AppComponent {
     addIcons({
       filho: person,
       calendario: calendar,
-      conversas: chatbubbles,
+      comunicados: chatbubbles,
       status: happy,
       menu: menu,
       menuOutline: menuOutline,

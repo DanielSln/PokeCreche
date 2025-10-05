@@ -46,4 +46,8 @@ export class MenuPage implements OnInit {
   irParaStatus() {
     this.router.navigateByUrl('/status');
   }
+
+  irParaComunicados() {
+    this.router.navigateByUrl('/comunicados');
+  }
 }
