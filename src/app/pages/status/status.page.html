@@ -1,8 +1,5 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-menu-button class="menu-button-externo"></ion-menu-button>
-    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
@@ -19,18 +16,16 @@
     <h2 class="titulo-status">Status Semanal</h2>
 
     <!-- Cards de status -->
-    <ion-card *ngFor="let item of status">
-      <ion-item lines="none">
-        <ion-icon [name]="item.icone" slot="start" [color]="item.cor"></ion-icon>
-        <ion-label>
-          <h3>{{ item.titulo }}</h3>
-          <p>{{ item.mensagem }}</p>
-        </ion-label>
-        <div slot="end" class="progress-container">
-          <div class="progress-text">{{ item.valor }}%</div>
-          <ion-progress-bar [value]="item.valor / 100" [color]="item.cor"></ion-progress-bar>
-        </div>
-      </ion-item>
-    </ion-card>
+    <ion-item *ngFor="let item of status" lines="none">
+      <ion-icon [name]="item.icone" slot="start" [color]="item.cor"></ion-icon>
+      <ion-label>
+        <h3>{{ item.titulo }}</h3>
+        <p>{{ item.mensagem }}</p>
+      </ion-label>
+      <div slot="end" class="progress-container">
+        <div class="progress-text">{{ item.valor }}%</div>
+        <ion-progress-bar [value]="item.valor / 100" [color]="item.cor"></ion-progress-bar>
+      </div>
+    </ion-item>
   </div>
 </ion-content>
