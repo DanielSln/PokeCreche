@@ -3,12 +3,12 @@ ion-header {
     position: relative;
     div.bg {
         height: 10rem;
-        background: linear-gradient(90deg, #c4680b, #ffffff);
+        background: linear-gradient(90deg, #007AFF, #ffffff);
         width: 130%;
         border-radius: 10px 10px 10px 50px;
         margin-top: -3rem;
         margin-left: -1rem;
-        box-shadow: 0 1px 10px rgba(255, 156, 98, 0.5);
+
 
     }
     ion-item {
@@ -67,13 +67,13 @@ ion-menu {
 }
 
 ion-item.selected {
-    border-left: 5px solid #c4680b;
+    border-left: 5px solid #007AFF;
     ion-label {
         font-weight: bold;
         font-size: 1.1rem;
     }
     ion-label, ion-icon {
-        color: #c4680b !important;
+        color: #007AFF !important;
     }
     ion-item {
         border-left: 5px solid #fff;
