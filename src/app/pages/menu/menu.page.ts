@@ -9,7 +9,6 @@ import {
   IonButton,
   IonMenuButton,
   IonButtons,
-  IonIcon
 } from '@ionic/angular/standalone';
 
 import { Router, RouterLink } from '@angular/router';
@@ -29,7 +28,6 @@ import { Router, RouterLink } from '@angular/router';
     IonButton,
     IonMenuButton,
     IonButtons,
-    IonIcon,
   ],
 })
 export class MenuPage implements OnInit {
