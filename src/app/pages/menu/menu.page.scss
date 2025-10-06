@@ -1,5 +1,5 @@
 ion-toolbar {
-  --background: #007AFF;
+  --background: #c4680b;
 }
 
 ion-toolbar ion-title {
@@ -57,7 +57,7 @@ ion-content {
   transition: all 0.2s ease;
 
   &:hover {
-    --background: #007AFF;
+    --background: #c4680b;
     --color: white;
     transform: translateY(-1px);
     box-shadow: 0 2px 8px rgba(0, 122, 255, 0.3);

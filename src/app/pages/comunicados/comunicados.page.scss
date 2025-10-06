@@ -1,17 +1,10 @@
 ion-toolbar {
-  --background: #007AFF;
-}
-
-ion-toolbar ion-title {
-  color: #000;
-  font-size: 22px;
-  text-align: center;
-  font-family: "Mango AC", sans-serif;
-  font-weight: bold;
+  --background: #c4680b
+  ;
 }
 
 ion-content {
-  --background: #F2F2F7;
+  --background: #f6d0a7;
 }
 
 ion-menu-button {
@@ -26,7 +19,6 @@ ion-menu-button {
 
 .page-content {
   padding: 0;
-  background: #F2F2F7;
 }
 
 .page-content h1 {
@@ -44,12 +36,12 @@ ion-menu-button {
   align-items: center;
   padding: 12px 16px;
   border-bottom: 1px solid #C6C6C8;
-  background: #FFFFFF;
   transition: background 0.2s;
   cursor: pointer;
   margin: 0 16px;
-  border-radius: 8px;
+  border-radius: 15px;
   margin-bottom: 2px;
+  background: #fff ;
 }
 
 .comunicado-card:hover {
