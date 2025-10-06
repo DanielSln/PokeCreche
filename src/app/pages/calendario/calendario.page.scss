@@ -1,5 +1,5 @@
 ion-toolbar {
-  --background: #007AFF;
+  --background: #c4680b;
 }
 
 ion-toolbar ion-title {
@@ -42,18 +42,18 @@ ion-datetime::part(calendar-day) {
 }
 
 ion-datetime::part(calendar-day):hover {
-  background: #007AFF !important;
+  background: #c4680b !important;
   color: white !important;
 }
 
 ion-datetime::part(calendar-day-today) {
-  background: #007AFF !important;
+  background: #c4680b !important;
   color: white !important;
   font-weight: bold !important;
 }
 
 ion-datetime::part(day-of-week) {
-  color: #007AFF !important;
+  color: #c4680b !important;
   font-weight: bold !important;
 }
 
@@ -63,13 +63,13 @@ ion-datetime::part(month-year-button) {
 }
 
 ion-datetime::part(calendar-day-active) {
-  background: #007AFF !important;
+  background: #c4680b !important;
   color: white !important;
 }
 
 ion-datetime::part(calendar-next-prev) {
   color: #fff !important;
-  background: #007AFF !important;
+  background: #c4680b !important;
   border-radius: 50% !important;
   width: 32px !important;
   height: 32px !important;
@@ -79,18 +79,18 @@ ion-datetime::part(calendar-next-prev) {
 }
 
 ion-datetime::part(calendar-next-prev):hover {
-  background: #0056CC !important;
+  background: #c4680b !important;
   transform: scale(1.1) !important;
 }
 
 ion-datetime::part(wheel-item) {
-  color: #007AFF !important;
+  color: #c4680b !important;
   font-weight: 500 !important;
   font-size: 16px !important;
 }
 
 ion-datetime::part(wheel-item-active) {
-  color: #007AFF !important;
+  color: #c4680b !important;
   font-weight: bold !important;
   font-size: 18px !important;
 }
@@ -114,7 +114,7 @@ ion-datetime::part(wheel-item-active) {
 
 .attendance-header h3 {
   margin: 0;
-  color: #333;
+  color: rgb(0, 0, 0);
   font-weight: 600;
   font-size: 18px;
   font-family: "Segoe UI", sans-serif;
@@ -137,13 +137,13 @@ ion-datetime::part(wheel-item-active) {
 .stat-number {
   font-size: 28px;
   font-weight: 700;
-  color: #2c3e50;
+  color: #000000;
   font-family: "Segoe UI", sans-serif;
 }
 
 .stat-label {
   font-size: 13px;
-  color: #666;
+  color: #000;
   font-weight: 500;
   margin-top: 5px;
   text-transform: uppercase;
@@ -164,7 +164,7 @@ ion-datetime::part(wheel-item-active) {
 
 .summary-text {
   font-size: 16px;
-  color: #2c3e50;
+  color: #c4680b;
   font-weight: 600;
   font-family: "Segoe UI", sans-serif;
 }
