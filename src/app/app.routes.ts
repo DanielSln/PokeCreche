@@ -44,7 +44,11 @@ export const routes: Routes = [
       import('./pages/comunicado-detalhes/comunicado-detalhes.page').then(
         (m) => m.ComunicadoDetalhesPage
       ),
+  },  {
+    path: 'login-aluno',
+    loadComponent: () => import('./pages/login-aluno/login-aluno.page').then( m => m.LoginAlunoPage)
   },
+
   //Menu Docente
   
 ];
