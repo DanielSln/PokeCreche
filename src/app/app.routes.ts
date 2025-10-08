@@ -1,7 +1,6 @@
 import { Routes } from '@angular/router';
 
 export const routes: Routes = [
-
   {
     path: '',
     redirectTo: 'menu',
@@ -44,27 +43,38 @@ export const routes: Routes = [
       import('./pages/comunicado-detalhes/comunicado-detalhes.page').then(
         (m) => m.ComunicadoDetalhesPage
       ),
-  },  {
+  },
+  {
     path: 'login-aluno',
-    loadComponent: () => import('./pages/login-aluno/login-aluno.page').then( m => m.LoginAlunoPage)
-  },
-  {
-    path: 'login-professor',
-    loadComponent: () => import('./pages/login-professor/login-professor.page').then( m => m.LoginProfessorPage)
-  },
-  {
-    path: 'termos',
-    loadComponent: () => import('./pages/termos/termos.page').then( m => m.TermosPage)
-  },
-  {
-    path: 'menu-docente',
-    loadComponent: () => import('./pages/menu-docente/menu-docente.page').then( m => m.MenuDocentePage)
-  },
-  {
-    path: 'docente',
-    loadComponent: () => import('./pages/docente/docente.page').then( m => m.DocentePage)
+    loadComponent: () =>
+      import('./pages/login-aluno/login-aluno.page').then(
+        (m) => m.LoginAlunoPage
+      ),
   },
 
   //Menu Docente
-  
+  {
+    path: 'login-professor',
+    loadComponent: () =>
+      import('./pages/login-professor/login-professor.page').then(
+        (m) => m.LoginProfessorPage
+      ),
+  },
+  {
+    path: 'termos',
+    loadComponent: () =>
+      import('./pages/termos/termos.page').then((m) => m.TermosPage),
+  },
+  {
+    path: 'menu-docente',
+    loadComponent: () =>
+      import('./pages/menu-docente/menu-docente.page').then(
+        (m) => m.MenuDocentePage
+      ),
+  },
+  {
+    path: 'docente',
+    loadComponent: () =>
+      import('./pages/docente/docente.page').then((m) => m.DocentePage),
+  },
 ];
