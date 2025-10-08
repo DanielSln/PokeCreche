@@ -23,6 +23,6 @@ export class LoginAlunoPage implements OnInit {
  
  
   irParaTermos() {
-    this.router.navigateByUrl('/menu');}
+    this.router.navigateByUrl('/termos');}
  
 }
