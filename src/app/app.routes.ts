@@ -1,14 +1,10 @@
 import { Routes } from '@angular/router';
 
 export const routes: Routes = [
-  {
-    path: 'termos',
-    loadComponent: () =>
-      import('./pages/termos/termos.page').then((m) => m.TermosPage),
-  },
+
   {
     path: '',
-    redirectTo: 'termos',
+    redirectTo: 'menu',
     pathMatch: 'full',
   },
   {
