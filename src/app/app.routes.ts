@@ -7,6 +7,8 @@ export const routes: Routes = [
     redirectTo: 'menu',
     pathMatch: 'full',
   },
+
+  //Menu Filho
   {
     path: 'menu',
     loadComponent: () =>
@@ -43,4 +45,6 @@ export const routes: Routes = [
         (m) => m.ComunicadoDetalhesPage
       ),
   },
+  //Menu Docente
+  
 ];
