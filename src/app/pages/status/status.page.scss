@@ -3,7 +3,7 @@ ion-toolbar {
 }
 
 ion-content {
-  --background: #F2F2F7;
+  --background: #f6d0a7;
   overflow-x: hidden !important;
   --padding-start: 8px;
   --padding-end: 8px;
@@ -87,7 +87,7 @@ ion-item {
   --min-height: 70px;
   width: 100%;
   box-sizing: border-box;
-  border: 1px solid #C6C6C8;
+  border: 3px solid #C6C6C8;
   border-radius: 12px;
   margin-bottom: 8px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
