@@ -29,7 +29,7 @@ export class LoginProfessorPage implements OnInit {
   ngOnInit() {}
 
   irParaLoginAluno() {
-    this.router.navigateByUrl('/cadastro-aluno');
+    this.router.navigateByUrl('/login-aluno');
   }
 
   IrParaMenuDocente() {

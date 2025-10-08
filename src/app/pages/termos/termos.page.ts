@@ -29,6 +29,6 @@ export class TermosPage {
   constructor(private router: Router) {}
   ngOnInit() {}
   aceitarTermos() {
-    this.router.navigateByUrl('/cadastro-aluno');
+    this.router.navigateByUrl('/login-aluno');
   }
 }
