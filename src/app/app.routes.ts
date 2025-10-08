@@ -48,6 +48,10 @@ export const routes: Routes = [
     path: 'login-aluno',
     loadComponent: () => import('./pages/login-aluno/login-aluno.page').then( m => m.LoginAlunoPage)
   },
+  {
+    path: 'login-professor',
+    loadComponent: () => import('./pages/login-professor/login-professor.page').then( m => m.LoginProfessorPage)
+  },
 
   //Menu Docente
   
