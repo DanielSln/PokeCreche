@@ -1,18 +1,81 @@
 ion-header {
-    height: 10rem;
+    height: 8rem;
+    position: relative;
     div.bg {
         height: 10rem;
+        background: linear-gradient(90deg, #c4680b, #ffffff);
+        width: 130%;
+        border-radius: 10px 10px 10px 50px;
+        margin-top: -3rem;
+        margin-left: -1rem;
+
+
+    }
+    ion-item {
+        top: 0.5rem;
+        --background: transparent;
+        position: absolute;
+        left: 0;
+        ion-avatar {
+            height: 5rem;
+            width: 5rem;
+            border: 3px solid #000000;
+            margin-right: 0.6rem;
+        }
+        ion-label {
+            font-size: 1rem;
+            font-weight: bold;
+            width: auto;
+            letter-spacing: 0.5px;
+        }
+        p {
+            margin-top: 2px;
+            font-size: 0.7rem;
+            font-weight: normal;
+        }
+        ion-text {
+            color: #ffffff;
+            font-size: 0.9rem;
+        }
     }
 }
 
 // Estilos do menu lateral
 ion-menu {
-    --background: #f4f4f4;
-    --color: #333;
-    
+    --background: #ffffff;
+    --color: #222222;
+
     ion-content {
         --background: #ffffff;
-    }
 
+        ion-item {
+            margin-top: 2rem;
+            --background: #ffffff; // força fundo branco nos itens
+            --color: #000;      // força texto escuro
+
+            ion-icon {
+                color: #000;   // ícones escuros
+                
+            }
+        }
+        .menu-itens {
+            letter-spacing: 0.5px;
+            //padding-left: 1rem;
+            margin-top: 10px;
+        }
+    }
 }
 
+ion-item.selected {
+    border-left: 5px solid #c4680b;
+    ion-label {
+        font-weight: bold;
+        font-size: 1.1rem;
+    }
+    ion-label, ion-icon {
+        color: #c4680b !important;
+    }
+    ion-item {
+        border-left: 5px solid #fff;
+    }
+}

@@ -1,4 +1,3 @@
-
 <ion-header class="ion-header-title" [translucent]="true">
   <ion-toolbar>
     <ion-title></ion-title>
@@ -16,18 +15,34 @@
   </ion-header>
 
   <div class="ion-padding">
-    <h1>Meu filho</h1>
+    <h1>Carteirinha Estudantil</h1>
     <div class="meu-filho">
-      assets/img-filho.png
+      <img src="assets/img/avatar.jpg" alt="Foto do filho">
     </div>
   </div>
 
   <div class="info_filho">
-    <p>Escola: Polivalente</p>
-    <p>Nome: Anthony</p>
+    <div class="info-item">
+      <span class="label">Escola:</span>
+      <span class="value">Polivalente</span>
+    </div>
+    <div class="info-item">
+      <span class="label">Nome:</span>
+      <span class="value">Anthony</span>
+    </div>
+    <div class="info-item">
+      <span class="label">Idade:</span>
+      <span class="value">16 anos</span>
+    </div>
+    <div class="info-item">
+      <span class="label">Série:</span>
+      <span class="value">1° Maternal</span>
+    </div>
   </div>
 
-  <div class="QR_code">
-    assets/QR_code.png
-  </div>
+  <!------- <div class="QR_code">
+    <div style="width: 150px; height: 150px; background: #fff; display: flex; align-items: center; justify-content: center; border-radius: 8px; margin: 0 auto;">
+      <span style="color: #000; font-size: 12px; font-weight: bold;">QR CODE</span>
+    </div>
+  </div> ------->
 </ion-content>

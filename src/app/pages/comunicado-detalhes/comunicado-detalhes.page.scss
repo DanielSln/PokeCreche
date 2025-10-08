@@ -1,0 +1,143 @@
+ion-toolbar {
+  --background: #c4680b;
+}
+
+ion-toolbar ion-title {
+  color: #000;
+  font-size: 20px;
+  margin-left: 45px;
+  font-family: "Mango AC", sans-serif;
+  font-weight: bold;
+}
+
+ion-content {
+  --background: #f6d0a7;
+}
+
+ion-back-button {
+  --color: #000;
+  font-size: 24px;
+}
+
+.comunicado-detalhes {
+  padding: 20px;
+}
+
+.comunicado-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  background: #FFFFFF;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #C6C6C8;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.comunicado-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  margin-right: 20px;
+  flex-shrink: 0;
+}
+
+.comunicado-avatar.urgent {
+  background: #ffebee;
+}
+
+.comunicado-avatar.info {
+  background: #e3f2fd;
+}
+
+.comunicado-avatar.default {
+  background: #e8f5e8;
+}
+
+.comunicado-info {
+  flex: 1;
+}
+
+.comunicado-info h1 {
+  margin: 0 0 10px 0;
+  color: #2c3e50;
+  font-size: 24px;
+  font-weight: bold;
+  font-family: "Mango AC", sans-serif;
+}
+
+.comunicado-date {
+  color: #666;
+  font-size: 14px;
+  margin: 0 0 10px 0;
+}
+
+.comunicado-badge {
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.comunicado-badge.urgent {
+  background: #FF3B30;
+}
+
+.comunicado-badge.info {
+  background: #007AFF;
+}
+
+.comunicado-badge.default {
+  background: #34C759;
+}
+
+.comunicado-content {
+  background: #FFFFFF;
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid #C6C6C8;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  line-height: 1.6;
+}
+
+.comunicado-content p {
+  color: #2c3e50;
+  font-size: 16px;
+  margin: 0;
+  font-family: system-ui, sans-serif;
+}
+
+@media (max-width: 480px) {
+  .comunicado-detalhes {
+    padding: 15px;
+  }
+  
+  .comunicado-header {
+    padding: 15px;
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .comunicado-avatar {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+  
+  .comunicado-info h1 {
+    font-size: 20px;
+  }
+  
+  .comunicado-content {
+    padding: 20px;
+  }
+  
+  .comunicado-content p {
+    font-size: 15px;
+  }
+}

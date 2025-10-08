@@ -1,0 +1,14 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Launch Ionic",
+      "type": "node",
+      "request": "launch",
+"program": "npx",
+      "args": ["ionic", "serve"],
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen"
+    }
+  ]
+}

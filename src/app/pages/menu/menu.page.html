@@ -8,13 +8,50 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <div class="botoes-menu">
-    <ion-button id="Filho" expand="block" (click)="irParaFilho()" >Filho(a)</ion-button>
-    <ion-button>Calendário</ion-button>
-    <ion-button>Notificações</ion-button>
-    <ion-button>Status</ion-button>
-    <ion-button>Conversas</ion-button>
-    <ion-button>Sair</ion-button>
-  </div>
+  <div class="menu-container">
+    <div class="welcome-section">
+      <h2>Menu Principal</h2>
+      <p>Escolha uma opção abaixo</p>
+    </div>
 
+    <div class="botoes-menu">
+      <ion-button
+        class="menu-btn"
+        id="Filho"
+        expand="block"
+        (click)="irParaFilho()"
+      >
+        👶 Filho(a)
+      </ion-button>
+
+      <ion-button
+        class="menu-btn"
+        id="Calendario"
+        expand="block"
+        (click)="irParaCalendario()"
+      >
+        📅 Calendário
+      </ion-button>
+
+      <ion-button
+        class="menu-btn"
+        id="Status"
+        expand="block"
+        (click)="irParaStatus()"
+      >
+        📊 Status
+      </ion-button>
+
+      <ion-button 
+        class="menu-btn"
+        id="Comunicados" 
+        expand="block"
+        (click)="irParaComunicados()"
+        >
+        📧 Comunicados
+      </ion-button>
+
+    </div>
+    
+  </div>
 </ion-content>

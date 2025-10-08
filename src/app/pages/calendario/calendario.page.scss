@@ -1,0 +1,193 @@
+ion-toolbar {
+  --background: #c4680b;
+}
+
+ion-toolbar ion-title {
+  color: #000;
+  font-size: 22px;
+  text-align: center;
+  font-family: "Mango AC", sans-serif;
+  font-weight: bold;
+}
+
+ion-content {
+  --background: #F2F2F7;
+}
+
+ion-menu-button {
+  --color: #000;
+  font-size: 24px;
+}
+
+.calendar-container {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+ion-datetime {
+  --background: #FFFFFF;
+  --border-radius: 12px;
+  width: 100%;
+  max-width: 400px;
+  margin-top: 20px;
+  border: 1px solid #C6C6C8;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+ion-datetime::part(calendar-day) {
+  color: #000 !important;
+  font-weight: 500 !important;
+}
+
+ion-datetime::part(calendar-day):hover {
+  background: #c4680b !important;
+  color: white !important;
+}
+
+ion-datetime::part(calendar-day-today) {
+  background: #c4680b !important;
+  color: white !important;
+  font-weight: bold !important;
+}
+
+ion-datetime::part(day-of-week) {
+  color: #c4680b !important;
+  font-weight: bold !important;
+}
+
+ion-datetime::part(month-year-button) {
+  color: #000 !important;
+  font-weight: bold !important;
+}
+
+ion-datetime::part(calendar-day-active) {
+  background: #c4680b !important;
+  color: white !important;
+}
+
+ion-datetime::part(calendar-next-prev) {
+  color: #fff !important;
+  background: #c4680b !important;
+  border-radius: 50% !important;
+  width: 32px !important;
+  height: 32px !important;
+  font-size: 16px !important;
+  font-weight: bold !important;
+  transition: all 0.2s ease !important;
+}
+
+ion-datetime::part(calendar-next-prev):hover {
+  background: #c4680b !important;
+  transform: scale(1.1) !important;
+}
+
+ion-datetime::part(wheel-item) {
+  color: #c4680b !important;
+  font-weight: 500 !important;
+  font-size: 16px !important;
+}
+
+ion-datetime::part(wheel-item-active) {
+  color: #c4680b !important;
+  font-weight: bold !important;
+  font-size: 18px !important;
+}
+
+.attendance-card {
+  background: #FFFFFF;
+  border-radius: 12px;
+  padding: 20px;
+  margin-top: 30px;
+  border: 1px solid #C6C6C8;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+}
+
+.attendance-header {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #f0f0f0;
+  padding-bottom: 10px;
+}
+
+.attendance-header h3 {
+  margin: 0;
+  color: rgb(0, 0, 0);
+  font-weight: 600;
+  font-size: 18px;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.attendance-stats {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+.stat-number {
+  font-size: 28px;
+  font-weight: 700;
+  color: #000000;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.stat-label {
+  font-size: 13px;
+  color: #000;
+  font-weight: 500;
+  margin-top: 5px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.stat-divider {
+  width: 1px;
+  height: 30px;
+  background: #e0e0e0;
+}
+
+.attendance-summary {
+  text-align: center;
+  padding-top: 15px;
+  border-top: 1px solid #f0f0f0;
+}
+
+.summary-text {
+  font-size: 16px;
+  color: #c4680b;
+  font-weight: 600;
+  font-family: "Segoe UI", sans-serif;
+}
+
+@media (max-width: 480px) {
+  ion-datetime {
+    max-width: 95%;
+  }
+  
+  .attendance-card {
+    max-width: 95%;
+    padding: 16px;
+  }
+  
+  .attendance-header h3 {
+    font-size: 16px;
+  }
+  
+  .stat-number {
+    font-size: 24px;
+  }
+  
+  .summary-text {
+    font-size: 14px;
+  }
+}

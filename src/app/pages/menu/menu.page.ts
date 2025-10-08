@@ -7,9 +7,7 @@ import {
   IonTitle,
   IonToolbar,
   IonButton,
-  IonMenu,
   IonMenuButton,
-  IonApp,
   IonButtons,
 } from '@ionic/angular/standalone';
 
@@ -32,7 +30,6 @@ import { Router, RouterLink } from '@angular/router';
     IonButtons,
   ],
 })
-
 export class MenuPage implements OnInit {
   constructor(private router: Router) {}
 
@@ -41,4 +38,16 @@ export class MenuPage implements OnInit {
   irParaFilho() {
     this.router.navigateByUrl('/filho');
   }
- }
+
+  irParaCalendario() {
+    this.router.navigateByUrl('/calendario');
+  }
+
+  irParaStatus() {
+    this.router.navigateByUrl('/status');
+  }
+
+  irParaComunicados() {
+    this.router.navigateByUrl('/comunicados');
+  }
+}
