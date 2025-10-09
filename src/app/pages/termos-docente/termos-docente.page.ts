@@ -30,6 +30,6 @@ export class TermosPage {
   ngOnInit() {}
   
   aceitarTermos() {
-    this.router.navigateByUrl('/menu');
+    this.router.navigateByUrl('/menu-docente');
   }
 }

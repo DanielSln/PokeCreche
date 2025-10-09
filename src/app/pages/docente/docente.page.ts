@@ -8,6 +8,7 @@ import {
   IonToolbar,
   IonMenuButton,
   IonButtons,
+  IonBackButton,
 } from '@ionic/angular/standalone';
 
 @Component({
@@ -24,6 +25,7 @@ import {
     FormsModule,
     IonMenuButton,
     IonButtons,
+    IonBackButton,
   ],
 })
 export class DocentePage implements OnInit {
