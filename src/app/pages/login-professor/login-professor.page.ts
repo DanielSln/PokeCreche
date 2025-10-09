@@ -31,4 +31,9 @@ export class LoginProfessorPage implements OnInit {
   irParaLoginAluno() {
     this.router.navigateByUrl('/login-aluno');
   }
+
+  IrParaTermosDocente () {
+    this.router.navigateByUrl('/termos-docente')
+  }
+
 }

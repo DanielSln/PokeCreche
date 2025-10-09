@@ -7,12 +7,14 @@ import {
   IonToolbar,
   IonButtons,
   IonMenuButton,
-
   IonItem,
   IonIcon,
   IonLabel,
   IonProgressBar,
+  IonButton,
+  IonBackButton,
 } from '@ionic/angular/standalone';
+import { Router } from '@angular/router';
 import { addIcons } from 'ionicons';
 import { restaurantOutline, happyOutline, peopleOutline } from 'ionicons/icons';
 
@@ -34,11 +36,13 @@ import { restaurantOutline, happyOutline, peopleOutline } from 'ionicons/icons';
     IonIcon,
     IonLabel,
     IonProgressBar,
+    IonButton,
+    IonBackButton,
   ],
 })
 
 export class StatusPage implements OnInit {
-  constructor() {
+  constructor(private router: Router) {
     addIcons({
       'restaurant-outline': restaurantOutline,
       'happy-outline': happyOutline,
@@ -72,4 +76,8 @@ export class StatusPage implements OnInit {
 
 
   ngOnInit() {}
+  
+  goToMenu() {
+    this.router.navigateByUrl('/menu');
+  }
 }

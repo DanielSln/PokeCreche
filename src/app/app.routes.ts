@@ -77,4 +77,9 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./pages/docente/docente.page').then((m) => m.DocentePage),
   },
+  {
+    path: 'termos-docente',
+    loadComponent: () => import('./pages/termos-docente/termos-docente.page').then( m => m.TermosPage)
+  },
+
 ];

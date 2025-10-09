@@ -5,8 +5,12 @@ import {
   IonToolbar,
   IonButtons,
   IonMenuButton,
+  IonButton,
+  IonIcon,
+  IonBackButton,
   IonDatetime,
 } from '@ionic/angular/standalone';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-calendario',
@@ -19,13 +23,19 @@ import {
     IonToolbar,
     IonButtons,
     IonMenuButton,
+  IonBackButton,
+    IonBackButton,
     IonDatetime,
   ],
 })
 export class CalendarioPage implements OnInit {
-  constructor() {}
+  constructor(private router: Router) {}
 
   ngOnInit() {
     
+  }
+
+  goToMenu() {
+    this.router.navigateByUrl('/menu');
   }
 }
