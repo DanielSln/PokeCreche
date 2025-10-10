@@ -22,17 +22,18 @@ ion-menu-button {
   font-size: 24px;
 }
 
-.page-content {
-  padding: 0;
+.title {
+  color: #000;
+  margin-bottom: 10px;
+  margin-left: 22px;
+  position: static;
+  font-size: 16px;
+  line-height: 1.2;
+  font-weight: 500; 
+  font-family: system-ui, sans-serif;
 }
 
-.page-content h1 {
-  text-align: center;
-  font-family: "Mango AC", sans-serif;
-  font-size: 24px;
-  color: #000;
-  font-weight: bold;
-  margin: 20px 0 20px 0;
+.page-content {
   padding: 0;
 }
 
