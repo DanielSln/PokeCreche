@@ -80,7 +80,8 @@ export const routes: Routes = [
   {
     path: 'termos-docente',
     loadComponent: () => import('./pages/termos-docente/termos-docente.page').then( m => m.TermosPage)
-  },  {
+  },
+  {
     path: 'calendario-docente',
     loadComponent: () => import('./pages/calendario-docente/calendario-docente.page').then( m => m.CalendarioDocentePage)
   },
@@ -88,6 +89,5 @@ export const routes: Routes = [
     path: 'turmas',
     loadComponent: () => import('./pages/turmas/turmas.page').then( m => m.TurmasPage)
   },
-
 
 ];
