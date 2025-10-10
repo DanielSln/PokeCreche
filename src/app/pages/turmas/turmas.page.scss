@@ -6,6 +6,14 @@ ion-content {
   --background: #f6d0a7;
 }
 
+Ion-Menu-Button {
+	color: #000000;
+}
+
+Ion-Back-Button {
+	color: #000000;
+}
+
 .container {
 	padding: 16px;
 }
@@ -87,9 +95,13 @@ ion-content {
 .id {
 	font-weight: 800;
 	font-size: 18px;
-	background: rgba(0, 0, 0, 0.9);
+	background: rgba(255, 255, 255, 0.9);
 	padding: 4px 8px;
 	border-radius: 8px;
+}
+
+.id p {
+    color: #000000;
 }
 
 .badge {
@@ -107,6 +119,11 @@ ion-content {
 	color: #fff;
 }
 
+h2 {
+	color: #000000;
+	justify-content: center;
+	display: flex;
+}
 @media (max-width: 480px) {
 	.grid { grid-template-columns: repeat(2, 1fr); }
 }

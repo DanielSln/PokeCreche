@@ -15,22 +15,19 @@
   <div class="container">
     <div *ngIf="!selectedTurma">
       <div class="search">
-        <input placeholder="Pesquise a turma:" [(ngModel)]="query" />
-        <button class="search-btn">🔍</button>
+        <input placeholder="Pesquise a turma:" [(ngModel)]="query" />  
       </div>
-
       <div class="grid">
         <div class="card" *ngFor="let t of filteredTurmas()" (click)="selectTurma(t)">
           <div class="avatar">👤</div>
           <div class="id">{{ t.id }}</div>
-          <div class="badge" [class.active]="t.selected">✔️</div>
         </div>
       </div>
     </div>
 
     <div *ngIf="selectedTurma">
       <div class="turma-header">
-        <button class="back" (click)="backToList()">◀ Voltar</button>
+        
         <h2>Turma ({{ selectedTurma.id }})</h2>
       </div>
 
