@@ -11,7 +11,6 @@ import {
   IonButton,
   IonIcon,
   IonBackButton,
-  IonTitle,
 } from '@ionic/angular/standalone';
 
 @Component({
@@ -28,7 +27,6 @@ import {
     CommonModule,
     FormsModule,
     IonBackButton,
-    IonTitle,
   ],
 })
 export class ComunicadosDocentePage implements OnInit {
