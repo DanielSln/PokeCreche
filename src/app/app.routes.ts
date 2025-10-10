@@ -88,6 +88,10 @@ export const routes: Routes = [
   {
     path: 'turmas',
     loadComponent: () => import('./pages/turmas/turmas.page').then( m => m.TurmasPage)
+  },  {
+    path: 'comunicados-docente',
+    loadComponent: () => import('./pages/comunicados-docente/comunicados-docente.page').then( m => m.ComunicadosDocentePage)
   },
+
 
 ];
