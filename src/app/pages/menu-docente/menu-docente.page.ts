@@ -38,10 +38,12 @@ export class MenuDocentePage implements OnInit {
     this.router.navigateByUrl('/docente');
   }
   IrParaCalendarioDocente() {
-    this.router.navigateByUrl('/calendario-docente')
+    this.router.navigateByUrl('/calendario-docente');
   }
   IrParaTurmas() {
-    this.router.navigateByUrl('/turmas')
+    this.router.navigateByUrl('/turmas');
   }
-
+  IrParaComunicados() {
+    this.router.navigateByUrl('/comunicados-docente')
+  }
 }
