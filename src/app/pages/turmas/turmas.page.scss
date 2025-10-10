@@ -1,0 +1,106 @@
+ion-content {
+  --background: #fff;
+}
+
+.container {
+	padding: 16px;
+}
+
+.search {
+	display: flex;
+	justify-content: center;
+	gap: 8px;
+	margin-bottom: 16px;
+}
+
+.search input {
+	width: 70%;
+	padding: 10px 12px;
+	border-radius: 20px;
+	border: 1px solid #ccc;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 16px;
+}
+
+.card {
+	background: #d3d3cd;
+	border-radius: 14px;
+	padding: 18px;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	min-height: 120px;
+	box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.students .card.student {
+	min-height: 160px;
+	border-radius: 16px;
+}
+
+.avatar-img {
+	width: 80px;
+	height: 80px;
+	border-radius: 12px;
+	object-fit: cover;
+	margin-bottom: 8px;
+}
+
+.name {
+	font-weight: 700;
+	margin-bottom: 8px;
+}
+
+.falta {
+	position: absolute;
+	right: 8px;
+	bottom: 8px;
+	width: 22px;
+	height: 22px;
+	border-radius: 50%;
+	background: rgba(0,0,0,0.1);
+	border: 2px solid #fff;
+}
+
+.falta.on {
+	background: #0f9d58;
+}
+
+.avatar {
+	font-size: 36px;
+	margin-bottom: 8px;
+}
+
+.id {
+	font-weight: 800;
+	font-size: 18px;
+	background: rgba(255,255,255,0.9);
+	padding: 4px 8px;
+	border-radius: 8px;
+}
+
+.badge {
+	position: absolute;
+	right: 8px;
+	bottom: 8px;
+	background: rgba(255,255,255,0.9);
+	padding: 4px 6px;
+	border-radius: 50%;
+	color: #666;
+}
+
+.badge.active {
+	background: #0f9d58;
+	color: #fff;
+}
+
+@media (max-width: 480px) {
+	.grid { grid-template-columns: repeat(2, 1fr); }
+}
+

@@ -37,4 +37,11 @@ export class MenuDocentePage implements OnInit {
   irParaDocente() {
     this.router.navigateByUrl('/docente');
   }
+  IrParaCalendarioDocente() {
+    this.router.navigateByUrl('/calendario-docente')
+  }
+  IrParaTurmas() {
+    this.router.navigateByUrl('/turmas')
+  }
+
 }

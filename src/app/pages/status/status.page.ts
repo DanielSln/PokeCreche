@@ -11,7 +11,6 @@ import {
   IonIcon,
   IonLabel,
   IonProgressBar,
-  IonButton,
   IonBackButton,
 } from '@ionic/angular/standalone';
 import { Router } from '@angular/router';
@@ -36,7 +35,6 @@ import { restaurantOutline, happyOutline, peopleOutline } from 'ionicons/icons';
     IonIcon,
     IonLabel,
     IonProgressBar,
-    IonButton,
     IonBackButton,
   ],
 })

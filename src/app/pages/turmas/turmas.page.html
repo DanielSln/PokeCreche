@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button class="menu-button-externo"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Turmas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="container">
+    <div *ngIf="!selectedTurma">
+      <div class="search">
+        <input placeholder="Pesquise a turma:" [(ngModel)]="query" />
+        <button class="search-btn">🔍</button>
+      </div>
+
+      <div class="grid">
+        <div class="card" *ngFor="let t of filteredTurmas()" (click)="selectTurma(t)">
+          <div class="avatar">👤</div>
+          <div class="id">{{ t.id }}</div>
+          <div class="badge" [class.active]="t.selected">✔️</div>
+        </div>
+      </div>
+    </div>
+
+    <div *ngIf="selectedTurma">
+      <div class="turma-header">
+        <button class="back" (click)="backToList()">◀ Voltar</button>
+        <h2>Turma ({{ selectedTurma.id }})</h2>
+      </div>
+
+      <div class="search">
+        <input placeholder="Pesquisar aluno:" />
+      </div>
+
+      <div class="grid students">
+        <div class="card student" *ngFor="let s of studentsByTurma[selectedTurma.id]" (click)="openStatus(s)">
+          <img [src]="s.avatar" class="avatar-img" />
+          <div class="name">{{ s.name }}</div>
+          <button class="falta" [class.on]="s.falta" (click)="toggleFalta(s, $event)"></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>

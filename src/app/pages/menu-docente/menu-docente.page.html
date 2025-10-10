@@ -24,12 +24,19 @@
         👨‍🏫 Docente
       </ion-button>
 
-      <ion-button class="menu-btn" id="Calendario" expand="block">
-        📅 Calendário
-      </ion-button>
+      <ion-button 
+      class="menu-btn" 
+      id="Calendario" 
+      expand="block" 
+      (click)="IrParaCalendarioDocente()"
+      >
+      📅 Editar calendário
+    </ion-button>
+        
 
-      <ion-button class="menu-btn" id="Status" expand="block">
-        📊 Status
+
+      <ion-button class="menu-btn" id="Turmas" expand="block" (click)="IrParaTurmas()">
+        👨‍👩‍👧‍👦 Turmas
       </ion-button>
 
       <ion-button class="menu-btn" expand="block"> 📧 Comunicados </ion-button>
