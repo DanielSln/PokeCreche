@@ -1,3 +1,7 @@
+ion-toolbar {
+    --background: #c4680b
+}
+
 ion-content {
   --background: #f6d0a7;
 }
@@ -15,9 +19,10 @@ ion-content {
 
 .search input {
 	width: 70%;
+    background-color: #fff;
 	padding: 10px 12px;
 	border-radius: 20px;
-	border: 1px solid #ccc;
+	border: 2px solid #000000;
 }
 
 .grid {
@@ -27,8 +32,10 @@ ion-content {
 }
 
 .card {
-	background: #d3d3cd;
+	background: #8d8f84;
 	border-radius: 14px;
+    border-style: groove;
+    border-color: #000000 ;
 	padding: 18px;
 	position: relative;
 	display: flex;
@@ -80,7 +87,7 @@ ion-content {
 .id {
 	font-weight: 800;
 	font-size: 18px;
-	background: rgba(255,255,255,0.9);
+	background: rgba(0, 0, 0, 0.9);
 	padding: 4px 8px;
 	border-radius: 8px;
 }
