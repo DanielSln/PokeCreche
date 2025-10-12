@@ -178,11 +178,13 @@ h2 {
 }
 
 .modal-content {
-	background: #fff;
+	background: #f6d0a7;
 	padding: 24px;
 	border-radius: 16px;
 	width: 90%;
 	max-width: 400px;
+	max-height: 85vh;
+	overflow-y: auto;
 	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
@@ -237,24 +239,38 @@ h2 {
 }
 
 .registro-item {
-	margin-bottom: 16px;
+	margin-bottom: 20px;
+	background: #f6d0a7;
+	padding: 16px;
+	border-radius: 12px;
+	border: 2px solid #c4680b;
 }
 
 .registro-item label {
 	display: block;
-	margin-bottom: 8px;
-	font-weight: 600;
+	margin-bottom: 10px;
+	font-weight: 700;
 	color: #000;
+	font-size: 16px;
 }
 
 .registro-item select {
 	width: 100%;
-	padding: 10px;
-	border: 2px solid #c4680b;
+	padding: 12px;
+	border: 2px solid #000;
 	border-radius: 8px;
 	font-size: 16px;
 	background: #fff;
 	box-sizing: border-box;
+	color: #000;
+	font-weight: 600;
+	cursor: pointer;
+}
+
+.registro-item select:focus {
+	outline: none;
+	border-color: #c4680b;
+	box-shadow: 0 0 0 3px rgba(196, 104, 11, 0.2);
 }
 
 @media (max-width: 480px) {
