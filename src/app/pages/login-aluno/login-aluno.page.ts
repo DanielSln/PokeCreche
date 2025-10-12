@@ -23,6 +23,8 @@ export class LoginAlunoPage implements OnInit {
  
  
   irParaTermos() {
-    this.router.navigateByUrl('/termos');}
+    localStorage.setItem('userType', 'aluno');
+    window.location.href = '/termos';
+  }
  
 }

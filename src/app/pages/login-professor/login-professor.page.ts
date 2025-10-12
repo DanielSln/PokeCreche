@@ -33,13 +33,14 @@ export class LoginProfessorPage implements OnInit {
   ngOnInit() {}
 
   irParaLoginAluno() {
-    this.router.navigateByUrl('/cadastro-aluno');
+    this.router.navigateByUrl('/login-aluno');
   }
 
   aceitarTermos() {
     if (this.nome === 'Professor' && this.id === '12345' && this.senha === 'senha123') {
+      localStorage.setItem('userType', 'docente');
       alert('Login realizado com sucesso!');
-      this.router.navigateByUrl('/menu-docente');
+      window.location.href = '/menu-docente';
     } else {
       alert('Credenciais inválidas! Tente novamente.');
     }
