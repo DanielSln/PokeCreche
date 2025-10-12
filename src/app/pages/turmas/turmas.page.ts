@@ -14,6 +14,8 @@ import { Router } from '@angular/router';
 export class TurmasPage implements OnInit {
 
   query: string = '';
+  showEditModal: boolean = false;
+  novoNomeTurma: string = '';
 
   turmas = Array.from({length: 12}).map((_,i) => ({ id: (i*37 + 32).toString().padStart(4,'0'), selected: false }));
 
@@ -22,7 +24,20 @@ export class TurmasPage implements OnInit {
 
   constructor(private router: Router) { }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.carregarTurmas();
+  }
+
+  carregarTurmas() {
+    const turmasSalvas = localStorage.getItem('turmas');
+    if (turmasSalvas) {
+      this.turmas = JSON.parse(turmasSalvas);
+    }
+  }
+
+  salvarTurmasNoStorage() {
+    localStorage.setItem('turmas', JSON.stringify(this.turmas));
+  }
 
   filteredTurmas() {
     const q = this.query?.trim();
@@ -53,6 +68,32 @@ export class TurmasPage implements OnInit {
 
   openStatus(student:any) {
     this.router.navigateByUrl('/status');
+  }
+
+  editarNomeTurma() {
+    this.novoNomeTurma = this.selectedTurma.id;
+    this.showEditModal = true;
+  }
+
+  fecharModal() {
+    this.showEditModal = false;
+    this.novoNomeTurma = '';
+  }
+
+  salvarNomeTurma() {
+    if (this.novoNomeTurma && this.novoNomeTurma.trim()) {
+      const oldId = this.selectedTurma.id;
+      const newId = this.novoNomeTurma.trim();
+      
+      if (this.studentsByTurma[oldId]) {
+        this.studentsByTurma[newId] = this.studentsByTurma[oldId];
+        delete this.studentsByTurma[oldId];
+      }
+      
+      this.selectedTurma.id = newId;
+      this.salvarTurmasNoStorage();
+    }
+    this.fecharModal();
   }
 
 }

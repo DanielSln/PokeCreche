@@ -27,8 +27,8 @@
 
     <div *ngIf="selectedTurma">
       <div class="turma-header">
-        
         <h2>Turma ({{ selectedTurma.id }})</h2>
+        <button class="edit-btn" (click)="editarNomeTurma()">✏️ Editar</button>
       </div>
 
       <div class="search">
@@ -40,6 +40,17 @@
           <img [src]="s.avatar" class="avatar-img" />
           <div class="name">{{ s.name }}</div>
           <button class="falta" [class.on]="s.falta" (click)="toggleFalta(s, $event)"></button>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-overlay" *ngIf="showEditModal" (click)="fecharModal()">
+      <div class="modal-content" (click)="$event.stopPropagation()">
+        <h3>Editar Nome da Turma</h3>
+        <input type="text" [(ngModel)]="novoNomeTurma" placeholder="Digite o novo nome" />
+        <div class="modal-buttons">
+          <button class="btn-cancelar" (click)="fecharModal()">Cancelar</button>
+          <button class="btn-salvar" (click)="salvarNomeTurma()">Salvar</button>
         </div>
       </div>
     </div>
