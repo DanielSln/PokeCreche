@@ -24,16 +24,25 @@ import { Router, RouterLink } from '@angular/router';
   ],
 })
 export class LoginProfessorPage implements OnInit {
+  nome: string = '';
+  id: string = '';
+  senha: string = '';
+
   constructor(private router: Router) {}
 
   ngOnInit() {}
 
   irParaLoginAluno() {
-    this.router.navigateByUrl('/login-aluno');
+    this.router.navigateByUrl('/cadastro-aluno');
   }
 
-  IrParaTermosDocente () {
-    this.router.navigateByUrl('/termos-docente')
+  aceitarTermos() {
+    if (this.nome === 'Professor' && this.id === '12345' && this.senha === 'senha123') {
+      alert('Login realizado com sucesso!');
+      this.router.navigateByUrl('/menu-docente');
+    } else {
+      alert('Credenciais inválidas! Tente novamente.');
+    }
   }
 
 }
