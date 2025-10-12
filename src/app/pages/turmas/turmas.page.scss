@@ -66,6 +66,8 @@ Ion-Back-Button {
 	border-radius: 12px;
 	object-fit: cover;
 	margin-bottom: 8px;
+	border-style: groove;
+	border-color: #000000 ;
 }
 
 .name {
@@ -99,6 +101,7 @@ Ion-Back-Button {
 	background: rgba(255, 255, 255, 0.9);
 	padding: 4px 8px;
 	border-radius: 8px;
+	color: #000000;
 }
 
 .id p {
