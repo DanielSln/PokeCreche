@@ -39,6 +39,8 @@ export class LoginProfessorPage implements OnInit {
   aceitarTermos() {
     if (this.nome === 'Professor' && this.id === '12345' && this.senha === 'senha123') {
       localStorage.setItem('userType', 'docente');
+      localStorage.setItem('userName', this.nome);
+      localStorage.setItem('userEmail', this.id + '@escola.com');
       alert('Login realizado com sucesso!');
       window.location.href = '/menu-docente';
     } else {

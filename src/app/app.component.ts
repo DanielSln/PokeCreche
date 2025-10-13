@@ -52,10 +52,11 @@ import {
 export class AppComponent {
   userType: 'aluno' | 'docente' = 'aluno';
   
-  profile = {
-    name: 'Daniel',
-    email: 'daniel7',
-  };
+  get profile() {
+    const name = localStorage.getItem('userName') || (this.userType === 'docente' ? 'Prof. Maria Santos' : 'João Silva');
+    const email = localStorage.getItem('userEmail') || (this.userType === 'docente' ? 'maria.prof@email.com' : 'joao.aluno@email.com');
+    return { name, email };
+  }
 
   pagesAluno = [
     { title: 'Menu', url: '/menu', icon: 'menu', active: true },
