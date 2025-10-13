@@ -24,11 +24,11 @@ export class LoginAlunoPage implements OnInit {
  
   irParaTermos() {
     const nome = (document.getElementById('nome') as HTMLInputElement)?.value || 'Aluno';
-    const cpf = (document.getElementById('cpf') as HTMLInputElement)?.value || '000.000.000-00';
+    const matricula = (document.getElementById('matricula') as HTMLInputElement)?.value || '0000';
     
     localStorage.setItem('userType', 'aluno');
     localStorage.setItem('userName', nome);
-    localStorage.setItem('userEmail', cpf);
+    localStorage.setItem('userEmail', 'Matrícula: ' + matricula);
     window.location.href = '/termos';
   }
  
