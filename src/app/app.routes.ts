@@ -80,13 +80,22 @@ export const routes: Routes = [
   {
     path: 'termos-docente',
     loadComponent: () => import('./pages/termos-docente/termos-docente.page').then( m => m.TermosPage)
-  },  {
+  },
+  {
     path: 'calendario-docente',
     loadComponent: () => import('./pages/calendario-docente/calendario-docente.page').then( m => m.CalendarioDocentePage)
   },
   {
     path: 'turmas',
     loadComponent: () => import('./pages/turmas/turmas.page').then( m => m.TurmasPage)
+  },
+  {
+    path: 'cadastro-aluno',
+    loadComponent: () => import('./pages/cadastro-aluno/cadastro-aluno.page').then( m => m.CadastroAlunoPage)
+  },
+  {
+    path: 'cadastro-docente',
+    loadComponent: () => import('./pages/cadastro-docente/cadastro-docente.page').then( m => m.CadastroDocentePage)
   },
 
 
