@@ -33,7 +33,14 @@
             [(ngModel)]="nome"
             required
           />
-          <input type="text" id="id" name="id" placeholder="ID" [(ngModel)]="id" required />
+          <input 
+            type="text" 
+            id="id" 
+            name="id" 
+            placeholder="ID" 
+            [(ngModel)]="id" 
+            required 
+          />
           <input
             type="password"
             id="senha"
@@ -49,11 +56,12 @@
             id="aceitar"
             expand="block"
             (click)="aceitarTermos()"
+            [disabled]="isLoading"
           >
-            Logar
+            {{ isLoading ? 'Carregando...' : 'Logar' }}
           </button>
         </form>
       </div>
     </div>
-  </div></ion-content
->
+  </div>
+</ion-content>

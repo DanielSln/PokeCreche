@@ -89,14 +89,5 @@ export const routes: Routes = [
     path: 'turmas',
     loadComponent: () => import('./pages/turmas/turmas.page').then( m => m.TurmasPage)
   },
-  {
-    path: 'cadastro-aluno',
-    loadComponent: () => import('./pages/cadastro-aluno/cadastro-aluno.page').then( m => m.CadastroAlunoPage)
-  },
-  {
-    path: 'cadastro-docente',
-    loadComponent: () => import('./pages/cadastro-docente/cadastro-docente.page').then( m => m.CadastroDocentePage)
-  },
-
 
 ];
