@@ -12,13 +12,25 @@ import { Router } from '@angular/router';
   imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, IonMenuButton, IonButtons, IonBackButton]
 })
 export class FilhoPage implements OnInit {
+  nome: string = '';
+  matricula: string = '';
+  escola: string = 'Senac';
+  idade: string = '';
+  serie: string = '';
+
   constructor(private router: Router) { }
 
   ngOnInit() {
+    this.carregarDados();
+  }
+
+  carregarDados() {
+    this.nome = localStorage.getItem('userName') || 'Não informado';
+    this.matricula = localStorage.getItem('userEmail') || 'Não informado';
+    // Adicione outras informações conforme necessário
   }
 
   goToMenu() {
     this.router.navigateByUrl('/menu');
   }
-    
 }
