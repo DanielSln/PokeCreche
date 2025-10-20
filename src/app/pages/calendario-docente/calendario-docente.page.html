@@ -73,23 +73,6 @@
         <button class="save-btn" (click)="saveEdit()">Salvar</button>
       </div>
 
-      <div class="editor-row color-row">
-        <div class="color-option" [class.selected]="editColor==='green'" (click)="editColor='green'">
-          <div class="color-dot green"></div>
-          <div class="color-label">Verde</div>
-        </div>
-
-        <div class="color-option" [class.selected]="editColor==='red'" (click)="editColor='red'">
-          <div class="color-dot red"></div>
-          <div class="color-label">Vermelho</div>
-        </div>
-
-        <div class="color-option" [class.selected]="editColor==='none'" (click)="editColor='none'">
-          <div class="color-dot none"></div>
-          <div class="color-label">Nenhuma</div>
-        </div>
-      </div>
-
       <div class="editor-actions">
         <button class="remove-btn" (click)="removeEdit()">Remover</button>
         <button class="cancel-btn" (click)="cancelEdit()">Cancelar</button>
