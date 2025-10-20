@@ -94,6 +94,10 @@ ion-content {
   padding-top: 6px;
   cursor: pointer;
   border-radius: 8px;
+  border: 2px solid transparent;
+}
+.day-cell:has(.event-marker) {
+  border-color: #ff8c00;
 }
 .day-cell.out-month {
   color: #cfcfcf;
