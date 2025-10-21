@@ -69,8 +69,6 @@ ion-content {
 }
 
 .foto-container img {
-  width: 100%;
-  height: 100%;
   object-fit: cover;
   border-radius: 15px;
   transform: rotate(90deg);
@@ -144,8 +142,8 @@ ion-content {
   }
 
   .foto-container {
-    width: 200px;
-    height: 200px;
+    width: 236px;
+    height: 236px;
   }
 
   .ion-padding h1 {
