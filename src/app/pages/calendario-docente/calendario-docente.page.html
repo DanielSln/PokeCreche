@@ -3,6 +3,7 @@
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/comunicados"></ion-back-button>
     </ion-buttons>
+    <ion-title>Calendário</ion-title>
     <ion-buttons slot="end">
       <ion-menu-button class="menu-button-externo"></ion-menu-button>
     </ion-buttons>
@@ -11,29 +12,70 @@
 
 <ion-content>
   <div class="calendar-container">
-    <ion-datetime 
-      presentation="date"
-      [showDefaultButtons]="false"
-      locale="pt-BR">
-    </ion-datetime>
-    
-    <div class="attendance-card">
-      <div class="attendance-header">
-        <h3>Controle de Frequência</h3>
+    <!-- top banner -->
+    <div class="month-banner">
+      <div class="month-left">
+        <div class="month-day">{{ (current.getDate() | number:'2.0') }}</div>
+        <div class="month-sun">☀️</div>
       </div>
-      <div class="attendance-stats">
-        <div class="stat-item">
-          <span class="stat-number">3</span>
-          <span class="stat-label">Faltas</span>
-        </div>
-        <div class="stat-divider"></div>
-        <div class="stat-item">
-          <span class="stat-number">22</span>
-          <span class="stat-label">Presenças</span>
+      <div class="month-center">
+        <div class="month-number">{{ (currentMonth + 1) | number:'2.0' }}</div>
+        <div class="month-name">{{ getMonthNameShort(currentMonth) }}</div>
+      </div>
+      <div class="month-right">
+        <div class="year">{{ currentYear }}</div>
+      </div>
+    </div>
+
+    <!-- month nav -->
+    <div class="nav-controls">
+      <button class="nav-btn" (click)="prevMonth()">◀</button>
+      <div class="nav-title">{{ getMonthNameShort(currentMonth) }} {{ currentYear }}</div>
+      <button class="nav-btn" (click)="nextMonth()">▶</button>
+    </div>
+
+    <!-- weekdays -->
+    <div class="weekday-row">
+      <div *ngFor="let w of ['D','S','T','Q','Q','S','S']" class="weekday">{{ w }}</div>
+    </div>
+
+    <!-- calendar -->
+    <div class="calendar-grid">
+      <div *ngFor="let week of weeks" class="week-row">
+        <div *ngFor="let day of week"
+             class="day-cell"
+             [class.out-month]="!day.inMonth"
+             (click)="openEdit(day)">
+          <div class="day-number" *ngIf="day.inMonth">{{ day.dayNumber }}</div>
+
+          <div *ngIf="day.event" class="event-marker" [ngClass]="day.event.color">
+            ✖
+          </div>
+
+          <div *ngIf="day.event" class="event-title">{{ day.event.title }}</div>
         </div>
       </div>
-      <div class="attendance-summary">
-        <span class="summary-text">Frequência: 88%</span>
+    </div>
+
+    <!-- editor panel (bottom) -->
+    <div class="editor-panel" [class.open]="panelOpen">
+      <div class="grabber"></div>
+
+      <div class="editor-row">
+        <label class="label">Nome da Data:</label>
+        <input type="text" [(ngModel)]="editTitle" placeholder="Ex: Prova, Aula, Reunião" />
+      </div>
+
+      <div class="editor-row small">
+        <label class="label">Dia:</label>
+        <div class="day-badge">{{ editingDateIso ? (editingDateIso.split('-')[2]) : '--' }}</div>
+        <div class="spacer"></div>
+        <button class="save-btn" (click)="saveEdit()">Salvar</button>
+      </div>
+
+      <div class="editor-actions">
+        <button class="remove-btn" (click)="removeEdit()">Remover</button>
+        <button class="cancel-btn" (click)="cancelEdit()">Cancelar</button>
       </div>
     </div>
   </div>

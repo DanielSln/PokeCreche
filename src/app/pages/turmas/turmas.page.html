@@ -1,7 +1,10 @@
 <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
-    <ion-back-button></ion-back-button>
+    <ion-back-button *ngIf="!selectedTurma"></ion-back-button>
+    <ion-button *ngIf="selectedTurma" (click)="backToList()" fill="clear" class="custom-back-btn">
+      <ion-icon slot="icon-only" name="chevron-back"></ion-icon>
+    </ion-button>
   </ion-buttons>
       <ion-buttons slot="end">
         <ion-menu-button class="menu-button-externo"></ion-menu-button>
@@ -15,23 +18,20 @@
   <div class="container">
     <div *ngIf="!selectedTurma">
       <div class="search">
-        <input placeholder="Pesquise a turma:" [(ngModel)]="query" />
-        <button class="search-btn">🔍</button>
+        <input placeholder="Pesquise a turma:" [(ngModel)]="query" />  
       </div>
-
       <div class="grid">
         <div class="card" *ngFor="let t of filteredTurmas()" (click)="selectTurma(t)">
           <div class="avatar">👤</div>
           <div class="id">{{ t.id }}</div>
-          <div class="badge" [class.active]="t.selected">✔️</div>
         </div>
       </div>
     </div>
 
     <div *ngIf="selectedTurma">
       <div class="turma-header">
-        <button class="back" (click)="backToList()">◀ Voltar</button>
         <h2>Turma ({{ selectedTurma.id }})</h2>
+        <button class="edit-btn" (click)="editarNomeTurma()">✏️ Editar</button>
       </div>
 
       <div class="search">
@@ -39,10 +39,56 @@
       </div>
 
       <div class="grid students">
-        <div class="card student" *ngFor="let s of studentsByTurma[selectedTurma.id]" (click)="openStatus(s)">
+        <div class="card student" *ngFor="let s of studentsByTurma[selectedTurma.id]" (click)="abrirRegistroAluno(s)">
           <img [src]="s.avatar" class="avatar-img" />
           <div class="name">{{ s.name }}</div>
           <button class="falta" [class.on]="s.falta" (click)="toggleFalta(s, $event)"></button>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-overlay" *ngIf="showEditModal" (click)="fecharModal()">
+      <div class="modal-content" (click)="$event.stopPropagation()">
+        <h3>Editar Nome da Turma</h3>
+        <input type="text" [(ngModel)]="novoNomeTurma" placeholder="Digite o novo nome" />
+        <div class="modal-buttons">
+          <button class="btn-cancelar" (click)="fecharModal()">Cancelar</button>
+          <button class="btn-salvar" (click)="salvarNomeTurma()">Salvar</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-overlay" *ngIf="showAlunoModal" (click)="fecharAlunoModal()">
+      <div class="modal-content modal-aluno" (click)="$event.stopPropagation()">
+        <h3>{{ alunoSelecionado?.name }}</h3>
+        <div class="registro-item">
+          <label>Alimentação:</label>
+          <select [(ngModel)]="alunoSelecionado.alimentacao">
+            <option value="Ótimo">Ótimo</option>
+            <option value="Bom">Bom</option>
+            <option value="Regular">Regular</option>
+            <option value="Ruim">Ruim</option>
+          </select>
+        </div>
+        <div class="registro-item">
+          <label>Comportamento:</label>
+          <select [(ngModel)]="alunoSelecionado.comportamento">
+            <option value="Ótimo">Ótimo</option>
+            <option value="Bom">Bom</option>
+            <option value="Regular">Regular</option>
+            <option value="Ruim">Ruim</option>
+          </select>
+        </div>
+        <div class="registro-item">
+          <label>Presença:</label>
+          <select [(ngModel)]="alunoSelecionado.presenca">
+            <option value="Presente">Presente</option>
+            <option value="Ausente">Ausente</option>
+          </select>
+        </div>
+        <div class="modal-buttons">
+          <button class="btn-cancelar" (click)="fecharAlunoModal()">Cancelar</button>
+          <button class="btn-salvar" (click)="salvarRegistroAluno()">Salvar</button>
         </div>
       </div>
     </div>

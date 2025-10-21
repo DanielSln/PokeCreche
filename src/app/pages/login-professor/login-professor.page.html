@@ -30,28 +30,38 @@
             id="nome"
             name="nome"
             placeholder="Nome"
+            [(ngModel)]="nome"
             required
           />
-          <input type="text" id="id" name="id" placeholder="ID" required />
+          <input 
+            type="text" 
+            id="id" 
+            name="id" 
+            placeholder="ID" 
+            [(ngModel)]="id" 
+            required 
+          />
           <input
-            type="text"
+            type="password"
             id="senha"
             name="senha"
             placeholder="Senha"
+            [(ngModel)]="senha"
             required
           />
 
           <button
-            type="submit"
+            type="button"
             class="btn-submit"
             id="aceitar"
             expand="block"
-            (click)="IrParaTermosDocente()"
+            (click)="aceitarTermos()"
+            [disabled]="isLoading"
           >
-            Logar
+            {{ isLoading ? 'Carregando...' : 'Logar' }}
           </button>
         </form>
       </div>
     </div>
-  </div></ion-content
->
+  </div>
+</ion-content>
