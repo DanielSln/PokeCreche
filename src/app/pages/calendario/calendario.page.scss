@@ -1,6 +1,3 @@
-/* calendario.page.scss */
-
-/* toolbar */
 ion-toolbar {
   --background: #c4680b;
 }
@@ -9,247 +6,193 @@ ion-toolbar ion-title {
   color: #000;
   font-size: 22px;
   text-align: center;
+  font-family: "Mango AC", sans-serif;
   font-weight: bold;
 }
 
-/* background */
 ion-content {
-  --background: #f6d0a7;
+  --background: #f2f2f7;
 }
 
-/* container */
+ion-menu-button {
+  --color: #000;
+  font-size: 24px;
+}
+
+ion-back-button {
+  --color: #000;
+  font-size: 22px;
+}
+
 .calendar-container {
-  padding: 12px 20px 120px 20px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-/* top banner */
-.month-banner {
+ion-datetime {
+  --background: #ffffff;
+  --border-radius: 12px;
   width: 100%;
-  max-width: 420px;
-  background: #5aa95f;
-  color: white;
-  border-radius: 8px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 14px 18px;
-  margin-bottom: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.06);
-}
-.month-left { display:flex; align-items:center; gap:8px; }
-.month-day { font-size: 20px; font-weight:700; background: rgba(255,255,255,0.08); padding:6px 10px; border-radius:8px; }
-.month-sun { font-size: 18px; }
-.month-center { text-align:center; }
-.month-number { font-size: 22px; font-weight:700; }
-.month-name { font-size: 14px; letter-spacing:2px; }
-.month-right .year { font-weight:700; }
-
-/* nav controls (keeps the small prev/next area) */
-.nav-controls {
-  width: 100%;
-  max-width: 420px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  margin: 12px 0 6px 0;
-}
-.nav-btn {
-  background: #c4680b;
-  color: #fff;
-  border: none;
-  border-radius: 20px;
-  width: 36px;
-  height: 36px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-}
-.nav-title { font-weight:700; color:#333; }
-
-/* weekdays */
-.weekday-row {
-  display:flex;
-  justify-content:space-between;
-  width: 100%;
-  max-width: 420px;
-  margin-bottom:6px;
-}
-.weekday {
-  width: calc(100%/7);
-  text-align:center;
-  color: #7a7a7a;
-  font-weight:600;
-  font-size: 12px;
+  max-width: 400px;
+  margin-top: 20px;
+  border: 1px solid #c6c6c8;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* calendar grid */
-.calendar-grid {
-  width: 100%;
-  max-width: 420px;
-  background: #fff;
+ion-datetime::part(calendar-day) {
+  color: #000 !important;
+  font-weight: 500 !important;
+}
+
+ion-datetime::part(calendar-day):hover {
+  background: #c4680b !important;
+  color: white !important;
+}
+
+ion-datetime::part(calendar-day-today) {
+  background: #c4680b !important;
+  color: white !important;
+  font-weight: bold !important;
+}
+
+ion-datetime::part(day-of-week) {
+  color: #c4680b !important;
+  font-weight: bold !important;
+}
+
+ion-datetime::part(month-year-button) {
+  color: #000 !important;
+  font-weight: bold !important;
+}
+
+ion-datetime::part(calendar-day-active) {
+  background: #c4680b !important;
+  color: white !important;
+}
+
+ion-datetime::part(calendar-next-prev) {
+  color: #fff !important;
+  background: #c4680b !important;
+  border-radius: 50% !important;
+  width: 32px !important;
+  height: 32px !important;
+  font-size: 16px !important;
+  font-weight: bold !important;
+  transition: all 0.2s ease !important;
+}
+
+ion-datetime::part(calendar-next-prev):hover {
+  background: #c4680b !important;
+  transform: scale(1.1) !important;
+}
+
+ion-datetime::part(wheel-item) {
+  color: #c4680b !important;
+  font-weight: 500 !important;
+  font-size: 16px !important;
+}
+
+ion-datetime::part(wheel-item-active) {
+  color: #c4680b !important;
+  font-weight: bold !important;
+  font-size: 18px !important;
+}
+
+.attendance-card {
+  background: #ffffff;
   border-radius: 12px;
-  padding: 14px;
-  box-shadow: 0 4px 14px rgba(0,0,0,0.06);
-  margin-bottom: 18px;
-}
-.week-row { display:flex; }
-.day-cell {
-  flex: 1;
-  height: 56px;
-  position: relative;
-  text-align: center;
-  padding-top: 6px;
-  cursor: default;
-  border-radius: 8px;
-  border: 2px solid transparent;
-}
-.day-cell:has(.event-marker) {
-  border-color: #ff8c00;
-}
-.day-cell:hover { background: rgba(0,0,0,0.02); }
-.day-cell.out-month {
-  color: #cfcfcf;
-  background: transparent;
-}
-.day-number { font-weight:600; color:#111; }
-
-/* event marker: X in center */
-.event-marker {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -10%);
-  font-size: 22px;
-  line-height: 1;
-  pointer-events: none;
-  opacity: 0.95;
-}
-.event-marker.green { color: #2ecc71; text-shadow: 0 0 6px rgba(46,204,113,0.14); }
-.event-marker.red { color: #e74c3c; text-shadow: 0 0 6px rgba(231,76,60,0.14); }
-
-/* small title at bottom of cell */
-.event-title {
-  position: absolute;
-  left: 6px;
-  bottom: 6px;
-  right: 6px;
-  font-size: 11px;
-  color: #333;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-
-/* bottom-like editor styling (visual only) */
-.editor-panel-sim {
+  padding: 20px;
+  margin-top: 30px;
+  border: 1px solid #c6c6c8;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
   width: 100%;
-  max-width: 420px;
-  background: #f6d9bf;
-  border-radius: 14px;
-  padding: 12px;
-  box-shadow: 0 -6px 20px rgba(0,0,0,0.08);
-  margin-top: 12px;
-}
-.grabber {
-  width: 56px;
-  height: 6px;
-  background: #9e9e9e;
-  border-radius: 6px;
-  margin: 6px auto 10px auto;
-}
-.editor-row {
-  display:flex;
-  align-items:center;
-  gap: 10px;
-  margin-bottom: 10px;
-}
-.label { font-weight:700; margin-right:6px; color:#000; min-width:120px; }
-.input-like {
-  flex: 1;
-  padding: 10px 12px;
-  border-radius: 24px;
-  border: none;
-  background: white;
-  font-size: 14px;
 }
 
-/* color options style (showing palette like professor) */
-.color-row {
-  display:flex;
-  justify-content: flex-start;
-  gap: 12px;
-  margin-top: 8px;
-}
-.color-dot {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  border: 2px solid #fff;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
-}
-.color-dot.green { background: #2ecc71; }
-.color-dot.red { background: #e74c3c; }
-.color-dot.none { background: #fff; border: 1px solid #ddd; }
-
-/* refresh button area */
-.refresh-wrap {
-  width: 100%;
-  max-width: 420px;
-  margin-top: 14px;
-  display:flex;
-  justify-content:center;
+.attendance-header {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #f0f0f0;
+  padding-bottom: 10px;
 }
 
-/* Refresh button improved style */
-.refresh-btn {
-  --background: linear-gradient(180deg, #7bbf7a 0%, #5fa65f 100%);
-  --color: #072000;
-  --box-shadow: 0 6px 18px rgba(95,166,95,0.22);
-  --border-radius: 28px;
-  padding: 10px 18px;
-  height: 46px;
-  font-weight: 800;
-  font-size: 15px;
-  letter-spacing: 0.4px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  text-transform: none;
-  transition: transform 0.12s ease, box-shadow 0.12s ease, opacity 0.12s ease;
-  border: 2px solid rgba(0,0,0,0.06);
-  border-radius: 28px;
-}
-
-/* icon styling inside button */
-.refresh-btn ion-icon {
+.attendance-header h3 {
+  margin: 0;
+  color: rgb(0, 0, 0);
+  font-weight: 600;
   font-size: 18px;
-  margin-right: 8px;
-  color: rgba(0,0,0,0.65);
-  filter: drop-shadow(0 1px 0 rgba(255,255,255,0.15));
+  font-family: "Segoe UI", sans-serif;
 }
 
-/* hover / active states */
-.refresh-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 24px rgba(95,166,95,0.28);
-  opacity: 0.98;
-}
-.refresh-btn:active {
-  transform: translateY(0);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
-  opacity: 0.95;
+.attendance-stats {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
-/* small adjustments */
-.nav-title, .weekday, .day-number {
-  font-family: "Mango AC", sans-serif;
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
 }
 
-/* responsive tweaks */
+.stat-number {
+  font-size: 28px;
+  font-weight: 700;
+  color: #000000;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.stat-label {
+  font-size: 13px;
+  color: #000;
+  font-weight: 500;
+  margin-top: 5px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.stat-divider {
+  width: 1px;
+  height: 30px;
+  background: #e0e0e0;
+}
+
+.attendance-summary {
+  text-align: center;
+  padding-top: 15px;
+  border-top: 1px solid #f0f0f0;
+}
+
+.summary-text {
+  font-size: 16px;
+  color: #c4680b;
+  font-weight: 600;
+  font-family: "Segoe UI", sans-serif;
+}
+
 @media (max-width: 480px) {
-  .calendar-container { padding-bottom: 160px; }
-  .calendar-grid .day-cell { height: 56px; }
-  .editor-panel-sim { left: 8px; right: 8px; }
-  .refresh-btn { width: 92%; padding: 10px 12px; font-size: 14px; }
+  ion-datetime {
+    max-width: 95%;
+  }
+
+  .attendance-card {
+    max-width: 95%;
+    padding: 16px;
+  }
+
+  .attendance-header h3 {
+    font-size: 16px;
+  }
+
+  .stat-number {
+    font-size: 24px;
+  }
+
+  .summary-text {
+    font-size: 14px;
+  }
 }
