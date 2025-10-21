@@ -1,9 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-back-button defaultHref="/comunicados"></ion-back-button>
-    </ion-buttons>
-    <ion-buttons slot="end">
+    <ion-buttons slot="">
       <ion-menu-button class="menu-button-externo"></ion-menu-button>
     </ion-buttons>
   </ion-toolbar>
@@ -11,31 +8,57 @@
 
 <ion-content>
   <div class="calendar-container">
-    <ion-datetime
-      presentation="date"
-      [showDefaultButtons]="false"
-      locale="pt-BR"
-    >
-    </ion-datetime>
+    <!-- top banner -->
+    <div class="month-banner">
+      <div class="month-left">
+        <div class="month-day">{{ (current.getDate() | number:'2.0') }}</div>
+        <div class="month-sun">☀️</div>
+      </div>
+      <div class="month-center">
+        <div class="month-number">{{ (currentMonth + 1) | number:'2.0' }}</div>
+        <div class="month-name">{{ getMonthNameShort(currentMonth) }}</div>
+      </div>
+      <div class="month-right">
+        <div class="year">{{ currentYear }}</div>
+      </div>
+    </div>
 
-    <div class="attendance-card">
-      <div class="attendance-header">
-        <h3>Controle de Frequência</h3>
-      </div>
-      <div class="attendance-stats">
-        <div class="stat-item">
-          <span class="stat-number">3</span>
-          <span class="stat-label">Faltas</span>
+    <!-- controls -->
+    <div class="nav-controls">
+      <button class="nav-btn" (click)="prevMonth()">◀</button>
+      <div class="nav-title">{{ getMonthNameShort(currentMonth) }} {{ currentYear }}</div>
+      <button class="nav-btn" (click)="nextMonth()">▶</button>
+    </div>
+
+    <!-- weekdays -->
+    <div class="weekday-row">
+      <div *ngFor="let w of ['D','S','T','Q','Q','S','S']" class="weekday">{{ w }}</div>
+    </div>
+
+    <!-- calendar grid -->
+    <div class="calendar-grid">
+      <div *ngFor="let week of weeks" class="week-row">
+        <div *ngFor="let day of week"
+             class="day-cell"
+             [class.out-month]="!day.inMonth">
+          <div class="day-number" *ngIf="day.inMonth">{{ day.dayNumber }}</div>
+
+          <!-- event marker (from docente) -->
+          <div *ngIf="day.event" class="event-marker" [ngClass]="day.event.color">
+            ✖
+          </div>
+
+          <div *ngIf="day.event" class="event-title">{{ day.event.title }}</div>
         </div>
-        <div class="stat-divider"></div>
-        <div class="stat-item">
-          <span class="stat-number">22</span>
-          <span class="stat-label">Presenças</span>
-        </div>
       </div>
-      <div class="attendance-summary">
-        <span class="summary-text">Frequência: 88%</span>
-      </div>
+    </div>
+
+    <!-- refreshed button (replaced as requested) -->
+    <div class="refresh-wrap">
+      <ion-button class="refresh-btn" fill="solid" size="large" (click)="refresh()">
+        <ion-icon name="sync-outline" slot="start"></ion-icon>
+        Atualizar eventos
+      </ion-button>
     </div>
   </div>
 </ion-content>
