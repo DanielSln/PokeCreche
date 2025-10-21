@@ -56,7 +56,9 @@ export class CalendarioPage implements OnInit {
 
   private storageKey = 'calendario_docente_events_v1';
 
-  constructor(private router: Router) {}
+  constructor(private router: Router) {
+    // construtor padrão: apenas injeta Router
+  }
 
   ngOnInit() {
     this.buildCalendar(this.currentYear, this.currentMonth);

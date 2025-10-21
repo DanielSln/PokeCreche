@@ -1,7 +1,7 @@
 import { NgClass } from '@angular/common';
 import { Component } from '@angular/core';
 import { Title } from '@angular/platform-browser';
-import { Router } from '@angular/router';
+import { Router, NavigationEnd } from '@angular/router';
 import {
   IonApp,
   IonRouterOutlet,
@@ -83,6 +83,13 @@ export class AppComponent {
   constructor(private router: Router) {
     this.addAllIcons();
     this.loadUserType();
+    // atualiza o item ativo com base na rota atual
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+        const currentUrl = event.urlAfterRedirects.split('?')[0];
+        this.pages.forEach((p) => (p.active = p.url === currentUrl));
+      }
+    });
   }
 
   loadUserType() {
