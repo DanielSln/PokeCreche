@@ -1,53 +1,40 @@
-CrecheApp (anteriormente PokeCreche) é um aplicativo desenvolvido para facilitar a comunicação entre pais e docentes em creches. Ele permite que os responsáveis recebam notificações sobre a rotina de seus filhos, incluindo alimentação, brincadeiras e sono, garantindo maior interação e acompanhamento do dia a dia das crianças.
+**CrecheApp** (anteriormente PokeCreche) é um aplicativo para comunicação entre pais e docentes, permitindo que pais acompanhem a rotina dos filhos na creche: alimentação, brincadeiras e sono.
 
-Funcionalidades
+## 🚀 Funcionalidades
 
-✅ Comunicação direta entre docentes e pais.
+* Comunicação direta entre docentes e pais.
+* Registro de atividades: alimentação, brincadeiras e sono.
+* Notificações em tempo real para os pais.
+* Funcionalidades futuras: fotos, relatórios semanais e relatórios personalizados.
 
-✅ Registro de atividades da criança: alimentação, brincadeiras e sono.
+## 🛠 Tecnologias
 
-✅ Notificações em tempo real para os pais sobre a rotina da criança.
+* **Ionic + Angular**
+* **TypeScript**
+* **HTML5**
+* **SCSS**
 
-⚙️ Funcionalidades futuras: registro de fotos, relatórios semanais e relatórios personalizados para cada criança.
+## ⚡ Instalação
 
-Tecnologias Utilizadas
+> Ainda em desenvolvimento.
 
-Ionic + Angular (framework principal)
+Instruções de instalação serão adicionadas assim que o app estiver pronto para execução.
 
-TypeScript (TS)
+## 🤝 Como Contribuir
 
-HTML5
+Contribuições externas ainda não estão abertas, mas futuramente:
 
-SCSS
+1. Faça um fork do projeto.
+2. Crie uma branch (`git checkout -b feature/NomeDaFeature`).
+3. Faça commit das alterações (`git commit -m 'Adicionar nova feature'`).
+4. Envie para o repositório (`git push origin feature/NomeDaFeature`).
+5. Abra um Pull Request.
 
-Instalação
+## 📄 Licença
 
-⚠️ Ainda em desenvolvimento
+Este projeto está licenciado sob a **MIT License**. Veja [LICENSE](LICENSE) para mais detalhes.
 
-Assim que o aplicativo estiver pronto para uso, as instruções de instalação e execução serão adicionadas aqui.
+## 📬 Contato
 
-Como Contribuir
-
-Atualmente, o projeto não está aberto para contribuições externas.
-Se desejar contribuir futuramente:
-
-Faça um fork do projeto.
-
-Crie uma branch com sua feature (git checkout -b feature/NomeDaFeature).
-
-Faça commit das suas alterações (git commit -m 'Adicionar nova feature').
-
-Envie para o repositório (git push origin feature/NomeDaFeature).
-
-Abra um Pull Request.
-
-Licença
-
-Este projeto está licenciado sob a MIT License. Veja o arquivo LICENSE
- para mais detalhes.
-
-Contato
-
-GitHub: DanielSln
-
-Projeto: CrecheApp
+* **GitHub:** [DanielSln](https://github.com/DanielSln)
+* **Projeto:** [CrecheApp](https://github.com/DanielSln/PokeCreche)
