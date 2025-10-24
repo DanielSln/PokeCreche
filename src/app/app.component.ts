@@ -92,13 +92,9 @@ export class AppComponent {
   pagesDocente = [
     { title: 'Menu', url: '/menu-docente', icon: 'menu', active: true },
     { title: 'Docente', url: '/docente', icon: 'person', active: false },
+    { title: 'Editar Calendário', url: '/calendario-docente', icon: 'calendar', active: false },
     { title: 'Turmas', url: '/turmas', icon: 'people', active: false },
-    {
-      title: 'Editar Calendário',
-      url: '/calendario-docente',
-      icon: 'calendar',
-      active: false,
-    },
+
     {
       title: 'Comunicados',
       url: '/comunicados-docente',
