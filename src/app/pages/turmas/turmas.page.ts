@@ -4,7 +4,6 @@ import { FormsModule } from '@angular/forms';
 import {
   IonContent,
   IonHeader,
-  IonTitle,
   IonToolbar,
   IonButtons,
   IonMenuButton,
@@ -24,7 +23,6 @@ import { chevronBack } from 'ionicons/icons';
   imports: [
     IonContent,
     IonHeader,
-    IonTitle,
     IonToolbar,
     CommonModule,
     FormsModule,
