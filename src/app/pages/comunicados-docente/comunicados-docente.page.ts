@@ -119,6 +119,7 @@ export class ComunicadosDocentePage implements OnInit {
   }
 
   goToMenu() {
-    this.router.navigateByUrl('/menu');
+    // ao acessar a área docente, retornar ao menu do docente
+    this.router.navigateByUrl('/menu-docente');
   }
 }

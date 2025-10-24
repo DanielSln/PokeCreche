@@ -73,21 +73,34 @@ export const routes: Routes = [
       ),
   },
   {
+    path: 'comunicados-docente',
+    loadComponent: () =>
+      import('./pages/comunicados-docente/comunicados-docente.page').then(
+        (m) => m.ComunicadosDocentePage
+      ),
+  },
+  {
     path: 'docente',
     loadComponent: () =>
       import('./pages/docente/docente.page').then((m) => m.DocentePage),
   },
   {
     path: 'termos-docente',
-    loadComponent: () => import('./pages/termos-docente/termos-docente.page').then( m => m.TermosPage)
+    loadComponent: () =>
+      import('./pages/termos-docente/termos-docente.page').then(
+        (m) => m.TermosPage
+      ),
   },
   {
     path: 'calendario-docente',
-    loadComponent: () => import('./pages/calendario-docente/calendario-docente.page').then( m => m.CalendarioDocentePage)
+    loadComponent: () =>
+      import('./pages/calendario-docente/calendario-docente.page').then(
+        (m) => m.CalendarioDocentePage
+      ),
   },
   {
     path: 'turmas',
-    loadComponent: () => import('./pages/turmas/turmas.page').then( m => m.TurmasPage)
+    loadComponent: () =>
+      import('./pages/turmas/turmas.page').then((m) => m.TurmasPage),
   },
-
 ];
