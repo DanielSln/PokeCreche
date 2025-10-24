@@ -7,8 +7,6 @@ import {
   IonToolbar,
   IonButtons,
   IonMenuButton,
-  IonBackButton,
-  IonTitle,
 } from '@ionic/angular/standalone';
 import { Router } from '@angular/router';
 
@@ -40,8 +38,6 @@ interface DayCell {
     IonToolbar,
     IonButtons,
     IonMenuButton,
-    IonBackButton,
-    IonTitle,
   ],
 })
 export class CalendarioDocentePage implements OnInit {
@@ -201,7 +197,20 @@ export class CalendarioDocentePage implements OnInit {
   }
 
   getMonthNameShort(monthIndex: number) {
-    return ['JAN', 'FEV', 'MAR', 'ABR', 'MAI', 'JUN', 'JUL', 'AGO', 'SET', 'OUT', 'NOV', 'DEZ'][monthIndex];
+    return [
+      'JAN',
+      'FEV',
+      'MAR',
+      'ABR',
+      'MAI',
+      'JUN',
+      'JUL',
+      'AGO',
+      'SET',
+      'OUT',
+      'NOV',
+      'DEZ',
+    ][monthIndex];
   }
 
   @HostListener('document:keydown.escape', ['$event'])
