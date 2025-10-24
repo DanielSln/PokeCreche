@@ -2,6 +2,10 @@ ion-toolbar {
   --background: #c4680b;
 }
 
+ion-menu-button {
+  color: #000;
+}
+
 ion-toolbar ion-title {
   color: #000;
   font-size: 22px;
@@ -10,7 +14,7 @@ ion-toolbar ion-title {
 }
 
 ion-content {
-  --background: #F2F2F7;
+  --background: #f6d0a7;
 }
 
 .calendar-container {
