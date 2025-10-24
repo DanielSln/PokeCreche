@@ -7,7 +7,6 @@ import {
   IonToolbar,
   IonButtons,
   IonMenuButton,
-  IonBackButton,
   IonButton,
   IonIcon,
 } from '@ionic/angular/standalone';
@@ -28,7 +27,6 @@ import { chevronBack } from 'ionicons/icons';
     FormsModule,
     IonMenuButton,
     IonButtons,
-    IonBackButton,
     IonButton,
     IonIcon,
   ],
