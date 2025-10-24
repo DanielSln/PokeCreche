@@ -158,6 +158,12 @@ ion-menu-button {
   margin-left: 320px;
 }
 
+.caneta ion-icon {
+  font-size: large;
+  color: #fff;
+  animation: pulse 2s infinite;
+}
+
 @keyframes pulse {
   0% { transform: scale(1); }
   50% { transform: scale(1.05); }
