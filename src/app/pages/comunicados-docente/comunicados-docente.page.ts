@@ -12,6 +12,7 @@ import {
   IonIcon,
   IonBackButton,
 } from '@ionic/angular/standalone';
+import { pencil } from 'ionicons/icons';
 
 @Component({
   selector: 'app-comunicados-docente',
@@ -24,12 +25,16 @@ import {
     IonToolbar,
     IonButtons,
     IonMenuButton,
+    IonButton,
+    IonIcon,
     CommonModule,
     FormsModule,
     IonBackButton,
   ],
 })
 export class ComunicadosDocentePage implements OnInit {
+  pencil = pencil;
+  
   comunicados = [
     {
       id: 0,
