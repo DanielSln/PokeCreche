@@ -141,7 +141,7 @@ ion-content {
   left: 12px;
   right: 12px;
   bottom: -320px;
-  background: #f6d9bf;
+  background: #fff;
   border-radius: 14px;
   padding: 12px;
   box-shadow: 0 -6px 20px rgba(0,0,0,0.12);
@@ -156,7 +156,7 @@ ion-content {
 .grabber {
   width: 56px;
   height: 6px;
-  background: #9e9e9e;
+  background: #7e7878;
   border-radius: 6px;
   margin: 6px auto 10px auto;
 }
@@ -177,11 +177,12 @@ input[type="text"] {
   font-size: 14px;
 }
 .day-badge {
-  background: white;
+  background: transparent;
   padding: 8px 12px;
   border-radius: 20px;
   font-weight:700;
   color:#000;
+  border: 2px solid rgba(0,0,0,0.12);
 }
 
 /* save button */
@@ -231,7 +232,7 @@ input[type="text"] {
   border-radius:12px;
 }
 .cancel-btn {
-  background: transparent;
+  background: #af0000;
   border: 1px solid rgba(0,0,0,0.12);
   padding:8px 12px;
   border-radius:12px;
