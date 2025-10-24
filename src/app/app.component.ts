@@ -89,25 +89,14 @@ export class AppComponent {
     },
   ];
 
+  //Páginas do docente
   pagesDocente = [
     { title: 'Menu', url: '/menu-docente', icon: 'menu', active: true },
-    { title: 'Docente', url: '/docente', icon: 'person', active: false },
-    { title: 'Editar Calendário', url: '/calendario-docente', icon: 'calendar', active: false },
-    { title: 'Turmas', url: '/turmas', icon: 'people', active: false },
-
-    {
-      title: 'Comunicados',
-      url: '/comunicados-docente',
-      icon: 'chatbubbles',
-      active: false,
-    },
-    {
-      title: 'Sair',
-      url: '/login-professor',
-      icon: 'log-out',
-      route: true,
-      active: false,
-    },
+    { title: 'Docente', url: '/docente', icon: 'person', active: false, },
+    { title: 'Editar Calendário', url: '/calendario-docente', icon: 'calendar', active: false, },
+    { title: 'Turmas', url: '/turmas', icon: 'people', active: false, },
+    { title: 'Comunicados', url: '/comunicados-docente', icon: 'chatbubbles', active: false, },
+    {title: 'Sair', url: '/login-professor', icon: 'log-out', route: true,active: false, },
   ];
 
   get pages() {
@@ -135,6 +124,7 @@ export class AppComponent {
       '/calendario-docente',
       '/turmas',
       '/login-professor',
+      '/comunicados-docente',
     ];
     const isDocente = docenteRoutes.some((r) => url.startsWith(r));
     const inferred = isDocente ? 'docente' : 'aluno';
@@ -160,7 +150,6 @@ export class AppComponent {
     addIcons({
       filho: person,
       calendario: calendar,
-      // mapeamentos adicionais para nomes usados nas páginas
       calendar: calendar,
       comunicados: chatbubbles,
       chatbubbles: chatbubbles,
