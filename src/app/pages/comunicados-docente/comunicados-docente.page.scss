@@ -156,20 +156,22 @@ ion-menu-button {
   height: 40px;
   margin-top: 70px ;
   margin-left: 320px;
+  --ripple-color: transparent;
+  --background-activated: #34C759;
+  --background-focused: #34C759;
 }
 
 .caneta ion-icon {
   font-size: large;
   color: #fff;
-  animation: pulse 2s infinite;
 }
 
-@keyframes pulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.05); }
-  100% { transform: scale(1); }
+//animaçoes do botao
+.caneta:hover {
+  background-color: #28a745;
 }
 
+//responsividade
 @media (max-width: 480px) {
   .page-content {
     padding: 15px;
