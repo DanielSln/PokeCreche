@@ -1,7 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { IonContent, IonHeader, IonTitle, IonToolbar, IonButtons, IonMenuButton, IonBackButton, IonButton, IonIcon } from '@ionic/angular/standalone';
+import {
+  IonContent,
+  IonHeader,
+  IonTitle,
+  IonToolbar,
+  IonButtons,
+  IonMenuButton,
+  IonBackButton,
+  IonButton,
+  IonIcon,
+} from '@ionic/angular/standalone';
 import { Router } from '@angular/router';
 import { addIcons } from 'ionicons';
 import { chevronBack } from 'ionicons/icons';
@@ -11,17 +21,31 @@ import { chevronBack } from 'ionicons/icons';
   templateUrl: './turmas.page.html',
   styleUrls: ['./turmas.page.scss'],
   standalone: true,
-  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, IonMenuButton, IonButtons, IonBackButton, IonButton, IonIcon]
+  imports: [
+    IonContent,
+    IonHeader,
+    IonTitle,
+    IonToolbar,
+    CommonModule,
+    FormsModule,
+    IonMenuButton,
+    IonButtons,
+    IonBackButton,
+    IonButton,
+    IonIcon,
+  ],
 })
 export class TurmasPage implements OnInit {
-
   query: string = '';
   showEditModal: boolean = false;
   novoNomeTurma: string = '';
   showAlunoModal: boolean = false;
   alunoSelecionado: any = null;
 
-  turmas = Array.from({length: 12}).map((_,i) => ({ id: (i*37 + 32).toString().padStart(4,'0'), selected: false }));
+  turmas = Array.from({ length: 12 }).map((_, i) => ({
+    id: (i * 37 + 32).toString().padStart(4, '0'),
+    selected: false,
+  }));
 
   selectedTurma: any = null;
   studentsByTurma: Record<string, any[]> = {};
@@ -48,17 +72,17 @@ export class TurmasPage implements OnInit {
   filteredTurmas() {
     const q = this.query?.trim();
     if (!q) return this.turmas;
-    return this.turmas.filter(t => t.id.includes(q));
+    return this.turmas.filter((t) => t.id.includes(q));
   }
 
-  selectTurma(t:any) {
+  selectTurma(t: any) {
     this.selectedTurma = t;
     if (!this.studentsByTurma[t.id]) {
-      this.studentsByTurma[t.id] = Array.from({length:6}).map((_,i) => ({
-        id: `${t.id}-${i+1}`,
+      this.studentsByTurma[t.id] = Array.from({ length: 6 }).map((_, i) => ({
+        id: `${t.id}-${i + 1}`,
         name: 'Nome',
         avatar: 'assets/img/avatar.jpg',
-        falta: false
+        falta: false,
       }));
     }
   }
@@ -67,7 +91,7 @@ export class TurmasPage implements OnInit {
     this.selectedTurma = null;
   }
 
-  toggleFalta(student:any, ev?: Event) {
+  toggleFalta(student: any, ev?: Event) {
     ev?.stopPropagation();
     student.falta = !student.falta;
   }
@@ -84,7 +108,9 @@ export class TurmasPage implements OnInit {
 
   salvarRegistroAluno() {
     if (this.alunoSelecionado) {
-      const aluno = this.studentsByTurma[this.selectedTurma.id].find(s => s.id === this.alunoSelecionado.id);
+      const aluno = this.studentsByTurma[this.selectedTurma.id].find(
+        (s) => s.id === this.alunoSelecionado.id
+      );
       if (aluno) {
         aluno.alimentacao = this.alunoSelecionado.alimentacao;
         aluno.comportamento = this.alunoSelecionado.comportamento;
@@ -108,16 +134,15 @@ export class TurmasPage implements OnInit {
     if (this.novoNomeTurma && this.novoNomeTurma.trim()) {
       const oldId = this.selectedTurma.id;
       const newId = this.novoNomeTurma.trim();
-      
+
       if (this.studentsByTurma[oldId]) {
         this.studentsByTurma[newId] = this.studentsByTurma[oldId];
         delete this.studentsByTurma[oldId];
       }
-      
+
       this.selectedTurma.id = newId;
       this.salvarTurmasNoStorage();
     }
     this.fecharModal();
   }
-
 }
