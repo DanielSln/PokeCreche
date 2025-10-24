@@ -8,8 +8,6 @@ import {
   IonToolbar,
   IonButtons,
   IonMenuButton,
-  IonButton,
-  IonIcon,
   IonBackButton,
 } from '@ionic/angular/standalone';
 

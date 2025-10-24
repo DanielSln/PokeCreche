@@ -7,8 +7,6 @@ import {
   IonToolbar,
   IonButtons,
   IonMenuButton,
-  IonBackButton,
-  IonTitle,
   IonButton,
   IonIcon,
 } from '@ionic/angular/standalone';
@@ -42,8 +40,6 @@ interface DayCell {
     IonToolbar,
     IonButtons,
     IonMenuButton,
-    IonBackButton,
-    IonTitle,
     IonButton,
     IonIcon,
   ],
