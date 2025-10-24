@@ -1,12 +1,11 @@
 <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
-    <ion-back-button *ngIf="!selectedTurma"></ion-back-button>
     <ion-button *ngIf="selectedTurma" (click)="backToList()" fill="clear" class="custom-back-btn">
       <ion-icon slot="icon-only" name="chevron-back"></ion-icon>
     </ion-button>
   </ion-buttons>
-      <ion-buttons slot="end">
+      <ion-buttons slot="">
         <ion-menu-button class="menu-button-externo"></ion-menu-button>
       </ion-buttons>
     
