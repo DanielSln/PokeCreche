@@ -8,9 +8,6 @@ import {
   IonToolbar,
   IonMenuButton,
   IonButtons,
-  IonButton,
-  IonIcon,
-  IonBackButton,
 } from '@ionic/angular/standalone';
 import { Router } from '@angular/router';
 
@@ -28,7 +25,6 @@ import { Router } from '@angular/router';
     FormsModule,
     IonMenuButton,
     IonButtons,
-    IonBackButton,
   ],
 })
 export class FilhoPage implements OnInit {

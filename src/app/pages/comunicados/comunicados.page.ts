@@ -8,7 +8,6 @@ import {
   IonToolbar,
   IonButtons,
   IonMenuButton,
-  IonBackButton,
 } from '@ionic/angular/standalone';
 
 @Component({
@@ -24,7 +23,6 @@ import {
     IonMenuButton,
     CommonModule,
     FormsModule,
-    IonBackButton,
   ],
 })
 export class ComunicadosPage implements OnInit {
